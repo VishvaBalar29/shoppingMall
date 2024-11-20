@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-/* Your CSS styles */
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -8,21 +7,21 @@ body {
     margin: 0px;
     padding: 0px;
 }
-li{
+nav li{
     list-style-type: none;
     text-decoration: none;
     display: inline;
 }
-a{
+nav a{
     text-decoration: none;
     margin-right: 35px;
-    color: white;
+    color: black;
 }
 nav{
     display: flex;
-    padding: 20px 20px;
+    padding: 25px 20px;
     align-items: center;
-    background-color: #d4b3bd;
+    background-color: #dae2e8;
 }
 nav .right-sec{
     position: absolute;
@@ -44,7 +43,7 @@ nav .right-sec input{
     margin-right: 12px;
 }
 #logo{
-    color: white;
+    color: black;
     padding-right: 155px;
     font-size: 30px;
     font-weight: bold;
@@ -69,6 +68,9 @@ nav .right-sec input{
     text-decoration: none;
     display: block;
     font-size: 14px;
+}
+#iconDropdown i{
+    color: #000;
 }
 #iconDropdown:hover #iconDropdownContent{
     display: inline;
