@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Your CSS styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -9,14 +15,14 @@ li{
 }
 a{
     text-decoration: none;
-    margin-right: 40px;
+    margin-right: 35px;
     color: white;
 }
 nav{
     display: flex;
-    padding: 24px 24px;
+    padding: 20px 20px;
     align-items: center;
-    background-color: #c292a1;
+    background-color: #d4b3bd;
 }
 nav .right-sec{
     position: absolute;
@@ -26,12 +32,12 @@ nav .right-sec{
 }
 nav .right-sec a{
     margin-right: 0px;
-    margin-left: 5px;
-    font-size: 25px;
+    margin-left: 7px;
+    font-size: 17px;
     cursor: pointer;
 }
 nav .right-sec input{
-    height: 22px;
+    height: 15px;
     border: white;
     border-radius: 4px;
     padding: 6px;
@@ -39,7 +45,7 @@ nav .right-sec input{
 }
 #logo{
     color: white;
-    padding-right: 190px;
+    padding-right: 155px;
     font-size: 30px;
     font-weight: bold;
 }
@@ -55,6 +61,7 @@ nav .right-sec input{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 10;
     padding: 0px;
+    background-color: #f7f1f3;
 }
 #iconDropdownContent a{
     color: #000;
