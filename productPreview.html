@@ -13,13 +13,17 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const productId = urlParams.get('id');
+        const category = urlParams.get('category');
+        const categoryProducts = products[category];
 
-        const product = products.find(p => p.id == productId);
+        const product = categoryProducts.find(p => p.id == productId);
 
         const container = document.getElementById('product-preview');
         if (product) {
             container.innerHTML = `
                 <h1>${product.name}</h1>
+                <p>Id: ${product.id}</p>
+                <p>name: ${product.name}</p>
                 <p>Price: ${product.price}</p>
                 <img src="${product.image}" alt="${product.name}" style="width: 200px; height: auto;">
             `;

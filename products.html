@@ -23,11 +23,11 @@
             <div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Fruits & Vegetables</a></li>
-                    <li><a href="products.html">Bakery</a></li>
-                    <li><a href="products.html">Fashion</a></li>
-                    <li><a href="products.html">Beauty</a></li>
-                    <li><a href="products.html">Decor</a></li>
+                    <li><a href="products.html?category=fruitsVegetables">Fruits & Vegetables</a></li>
+                    <li><a href="products.html?category=bakery">Bakery</a></li>
+                    <li><a href="products.html?category=fashion">Fashion</a></li>
+                    <li><a href="products.html?category=beauty">Beauty</a></li>
+                    <li><a href="products.html?category=decor">Decor</a></li>
                     <li><a href="about.html">About Us</a></li>
                 </ul>
             </div>
@@ -64,13 +64,13 @@
                 <div>
                     <p class="category">Fashion</p>
                     <ul class="subCat">
-                        <a href="products.html?category=women">
+                        <a href="products.html?category=fashion&subcat=women">
                             <li>Women</li>
                         </a>
-                        <a href="products.html?category=men">
+                        <a href="products.html?category=fashion&subcat=men">
                             <li>Men</li>
                         </a>
-                        <a href="products.html?category=kids">
+                        <a href="products.html?category=fashion&subcat=kids">
                             <li>Kids</li>
                         </a>
                     </ul>
@@ -79,13 +79,13 @@
                 <div>
                     <p class="category">Beauty</p>
                     <ul class="subCat">
-                        <a href="products.html?category=makeup">
+                        <a href="products.html?category=beauty&subcat=makeup">
                             <li>Makeup</li>
                         </a>
-                        <a href="products.html?category=skincare">
+                        <a href="products.html?category=beauty&subcat=skincare">
                             <li>SkinCare</li>
                         </a>
-                        <a href="products.html?category=haircare">
+                        <a href="products.html?category=beauty&subcat=haircare">
                             <li>HaireCare</li>
                         </a>
                     </ul>
@@ -94,13 +94,13 @@
                 <div>
                     <p class="category">Fruits & Vegetables</p>
                     <ul class="subCat">
-                        <a href="products.html?category=fruits">
+                        <a href="products.html?category=fruitsVegetables&subcat=fruits">
                             <li>Fresh Fruits</li>
                         </a>
-                        <a href="products.html?category=vegetables">
+                        <a href="products.html?category=fruitsVegetables&subcat=vegetables">
                             <li>Fresh Vegetables</li>
                         </a>
-                        <a href="products.html?category=exoticFruits">
+                        <a href="products.html?category=fruitsVegetables&subcat=exoticFruits">
                             <li>Exotic fruit & veggies</li>
                         </a>
                     </ul>
@@ -109,16 +109,16 @@
                 <div>
                     <p class="category">Bakery</p>
                     <ul class="subCat">
-                        <a href="products.html?category=breads">
+                        <a href="products.html?category=bakery&subcat=breads">
                             <li>Breads & Buns</li>
                         </a>
-                        <a href="products.html?category=cakes">
+                        <a href="products.html?category=bakery&subcat=cakes">
                             <li>Cakes</li>
                         </a>
-                        <a href="products.html?category=dairy">
+                        <a href="products.html?category=bakery&subcat=dairy">
                             <li>Dairy</li>
                         </a>
-                        <a href="products.html?category=snacks">
+                        <a href="products.html?category=bakery&subcat=snacks">
                             <li>Snacks</li>
                         </a>
                     </ul>
@@ -127,16 +127,16 @@
                 <div>
                     <p class="category">Decor</p>
                     <ul class="subCat">
-                        <a href="products.html?category=vases">
+                        <a href="products.html?category=decor&subcat=vases">
                             <li>Vases</li>
                         </a>
-                        <a href="products.html?category=mirrors">
+                        <a href="products.html?category=decor&subcat=mirrors">
                             <li>Mirrors</li>
                         </a>
-                        <a href="products.html?category=lamps">
+                        <a href="products.html?category=decor&subcat=lamps">
                             <li>Lamps & Lighting</li>
                         </a>
-                        <a href="products.html?category=sofas">
+                        <a href="products.html?category=decor&subcat=sofas">
                             <li>Sofas & Seating</li>
                         </a>
                     </ul>
@@ -160,18 +160,19 @@
 
         const queryString = window.location.search; // Get query string part of the URL
         const urlParams = new URLSearchParams(queryString);
-
-        // Get category parameter (if it exists)
         const category = urlParams.get('category');
+
+        const subcat = urlParams.get("subcat");
+        const categoryProducts = products[category];
 
         const productCard = () => {
             const container = document.getElementById('right-panel');
             container.innerHTML = ''; // Clear previous content
 
             // Filter products based on category if it exists
-            const filteredProducts = category
-                ? products.filter(product => product.category === category)
-                : products; // Show all products if no category is specified
+                const filteredProducts = subcat
+                ? categoryProducts.filter((product) => product.subcat === subcat)
+                : categoryProducts;
 
             // Render the products
             if (filteredProducts.length > 0) {
@@ -180,9 +181,11 @@
                 <div>
                     <p>Name: ${product.name}</p>
                     <p>Price: ${product.price}</p>
+                    <p>category: ${category}</p>
+                    <p>subcategory: ${subcat}</p>
                     <p><img src="${product.image}" alt="${product.name}" style="width: 100px; height: auto;"></p>
                     <p>
-                        <a href="productPreview.html?id=${product.id}">
+                        <a href="productPreview.html?category=${category}&id=${product.id}">
                             <button>Preview</button>
                         </a>
                     </p>
