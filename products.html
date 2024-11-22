@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src="js/fashion.js"></script>
 </head>
 
 <body>
@@ -48,7 +49,7 @@
                         <a href="signup.html">SignUp</a>
                         <a href="profile.html">Profile</a>
                         <a href="logout.html">Logout</a>
-                        
+
                     </div>
                 </div>
 
@@ -58,68 +59,143 @@
 
 
     <section class="main">
-    <section class="left-panel">
-        <div class="left">
-            <div>
-                <p class="category">Fashion</p>
-                <ul class="subCat">
-                    <a href=""><li>Women</li></a>
-                    <a href=""><li>Men</li></a>
-                    <a href=""><li>Kids</li></a>
-                </ul>
-            </div>
+        <section class="left-panel">
+            <div class="left">
+                <div>
+                    <p class="category">Fashion</p>
+                    <ul class="subCat">
+                        <a href="products.html?category=women">
+                            <li>Women</li>
+                        </a>
+                        <a href="products.html?category=men">
+                            <li>Men</li>
+                        </a>
+                        <a href="products.html?category=kids">
+                            <li>Kids</li>
+                        </a>
+                    </ul>
+                </div>
 
-            <div>
-                <p class="category">Beauty</p>
-                <ul class="subCat">
-                    <a href=""><li>Makeup</li></a>
-                    <a href=""><li>SkinCare</li></a>
-                    <a href=""><li>HaireCare</li></a>
-                </ul>
-            </div>
+                <div>
+                    <p class="category">Beauty</p>
+                    <ul class="subCat">
+                        <a href="products.html?category=makeup">
+                            <li>Makeup</li>
+                        </a>
+                        <a href="products.html?category=skincare">
+                            <li>SkinCare</li>
+                        </a>
+                        <a href="products.html?category=haircare">
+                            <li>HaireCare</li>
+                        </a>
+                    </ul>
+                </div>
 
-            <div>
-                <p class="category">Fruits & Vegetables</p>
-                <ul class="subCat">
-                    <a href=""><li>Fresh Fruits</li></a>
-                    <a href=""><li>Fresh Vegetables</li></a>
-                    <a href=""><li>Exotic fruit & veggies</li></a>
-                </ul>
-            </div>
+                <div>
+                    <p class="category">Fruits & Vegetables</p>
+                    <ul class="subCat">
+                        <a href="products.html?category=fruits">
+                            <li>Fresh Fruits</li>
+                        </a>
+                        <a href="products.html?category=vegetables">
+                            <li>Fresh Vegetables</li>
+                        </a>
+                        <a href="products.html?category=exoticFruits">
+                            <li>Exotic fruit & veggies</li>
+                        </a>
+                    </ul>
+                </div>
 
-            <div>
-                <p class="category">Bakery</p>
-                <ul class="subCat">
-                    <a href=""><li>Breads & Buns</li></a>
-                    <a href=""><li>Cakes</li></a>
-                    <a href=""><li>Dairy</li></a>
-                    <a href=""><li>Snacks</li></a>
-                </ul>
-            </div>
+                <div>
+                    <p class="category">Bakery</p>
+                    <ul class="subCat">
+                        <a href="products.html?category=breads">
+                            <li>Breads & Buns</li>
+                        </a>
+                        <a href="products.html?category=cakes">
+                            <li>Cakes</li>
+                        </a>
+                        <a href="products.html?category=dairy">
+                            <li>Dairy</li>
+                        </a>
+                        <a href="products.html?category=snacks">
+                            <li>Snacks</li>
+                        </a>
+                    </ul>
+                </div>
 
-            <div>
-                <p class="category">Decor</p>
-                <ul class="subCat">
-                    <a href=""><li>Makeup</li></a>
-                    <a href=""><li>SkinCare</li></a>
-                    <a href=""><li>HaireCare</li></a>
-                </ul>
-            </div>
+                <div>
+                    <p class="category">Decor</p>
+                    <ul class="subCat">
+                        <a href="products.html?category=vases">
+                            <li>Vases</li>
+                        </a>
+                        <a href="products.html?category=mirrors">
+                            <li>Mirrors</li>
+                        </a>
+                        <a href="products.html?category=lamps">
+                            <li>Lamps & Lighting</li>
+                        </a>
+                        <a href="products.html?category=sofas">
+                            <li>Sofas & Seating</li>
+                        </a>
+                    </ul>
+                </div>
 
-        </div>
-        <div class="right">
-            <section class="right-panel">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </section>
-        </div>
+            </div>
+            <div class="right">
+                <section id="right-panel">
+
+                </section>
+            </div>
+        </section>
+
+
     </section>
 
 
-</section>
+
+    <script src="js/fashion.js"></script>
+    <script>
+
+        const queryString = window.location.search; // Get query string part of the URL
+        const urlParams = new URLSearchParams(queryString);
+
+        // Get category parameter (if it exists)
+        const category = urlParams.get('category');
+
+        const productCard = () => {
+            const container = document.getElementById('right-panel');
+            container.innerHTML = ''; // Clear previous content
+
+            // Filter products based on category if it exists
+            const filteredProducts = category
+                ? products.filter(product => product.category === category)
+                : products; // Show all products if no category is specified
+
+            // Render the products
+            if (filteredProducts.length > 0) {
+                filteredProducts.forEach(product => {
+                    container.innerHTML += `
+                <div>
+                    <p>Name: ${product.name}</p>
+                    <p>Price: ${product.price}</p>
+                    <p><img src="${product.image}" alt="${product.name}" style="width: 100px; height: auto;"></p>
+                    <p>
+                        <a href="productPreview.html?id=${product.id}">
+                            <button>Preview</button>
+                        </a>
+                    </p>
+                </div>`;
+                });
+            } else {
+                container.innerHTML = `<p>No products found in this category.</p>`;
+            }
+        };
+
+        productCard();
+
+    </script>
 </body>
 
 </html>

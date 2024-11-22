@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="product-preview"></div>
+
+    <script src="js/fashion.js"></script>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const productId = urlParams.get('id');
+
+        const product = products.find(p => p.id == productId);
+
+        const container = document.getElementById('product-preview');
+        if (product) {
+            container.innerHTML = `
+                <h1>${product.name}</h1>
+                <p>Price: ${product.price}</p>
+                <img src="${product.image}" alt="${product.name}" style="width: 200px; height: auto;">
+            `;
+        } else {
+            container.innerHTML = `<p>Product not found!</p>`;
+        }
+    </script>
+</body>
+</html>

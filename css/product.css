@@ -43,13 +43,13 @@ body {
 .subCat li:hover{
     color: #5F7B94;
 }
-.right-panel{
+#right-panel{
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 30px;
 }
 
-.right-panel div{
+#right-panel div{
     height: 300px;
     width: 300px;
     background-color: white;
