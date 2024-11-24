@@ -45,12 +45,34 @@ body {
 }
 #right-panel{
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 30px;
+    grid-template-columns: auto auto auto auto;
+    gap: 35px;
 }
 
-#right-panel div{
-    height: 300px;
-    width: 300px;
+#right-panel .card{
+    height: 370px;
+    width: 240px;
     background-color: white;
+}
+#right-panel .card:hover{
+    box-shadow: 3px 3px 15px #a7b4c1;
+}
+.card{
+    text-align: center;
+}
+.card .details{
+    text-align: center;
+    justify-content: center;
+}
+.card .details .brand{
+    color: #b7b7b7;
+    font-size: 12px;
+}
+.card .details .pname{
+    font-size: 14px;
+}
+
+#pagination{
+    text-align: center;
+    margin-top: 18px;
 }

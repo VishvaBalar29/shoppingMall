@@ -8,28 +8,29 @@
 <body>
     <div id="product-preview"></div>
 
-    <script src="js/fashion.js"></script>
+    <script src="js/data/category.js"></script>
+    <script src="js/data/products.js"></script>
     <script>
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const productId = urlParams.get('id');
-        const category = urlParams.get('category');
-        const categoryProducts = products[category];
-
-        const product = categoryProducts.find(p => p.id == productId);
-
-        const container = document.getElementById('product-preview');
-        if (product) {
-            container.innerHTML = `
-                <h1>${product.name}</h1>
-                <p>Id: ${product.id}</p>
-                <p>name: ${product.name}</p>
-                <p>Price: ${product.price}</p>
-                <img src="${product.image}" alt="${product.name}" style="width: 200px; height: auto;">
-            `;
-        } else {
-            container.innerHTML = `<p>Product not found!</p>`;
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
         }
+        const pid = getQueryParam('pid');
+        var productData = products.filter(product => product.id== pid);
+        console.log(productData);
+        
+        var container = document.getElementById('product-preview');
+        productData.forEach(product => {
+            container.innerHTML += `<p>${product.id}</p>
+                        <p>${product.name}</p>
+                        <p>${product.catId}</p>
+                        <p>${product.subCatId}</p>
+                        <p>${product.image}</p>
+                        <p>${product.price}</p>
+                        <button>Add to Cart</button>
+            `;
+        })
+        
     </script>
 </body>
 </html>
