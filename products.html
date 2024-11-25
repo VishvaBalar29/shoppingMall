@@ -58,7 +58,7 @@
 
 
     <section class="main">
-        <p id="cat-head"></p>
+        <p id="cat-head">Fashion > Women</p>
         <section class="left-panel">
             <div class="left">
 
@@ -147,72 +147,7 @@
             <div class="right">
 
                 <section id="right-panel">
-                    <div class="card">
-                        <div class="img"><img src="images/Fashion/swet4.webp" alt="" height="280" width="240"></div>
-                        <div class="details">
-                            <p class="brand">Zara</p>
-                            <p class="pname">Women White Jacket</p>
-                            <p>₹ 1800</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img"><img src="images/Fashion/top2.webp" alt="" height="280" width="240"></div>
-                        <div class="details">
-                            <p class="brand">Zara</p>
-                            <p class="pname">Women White Jacket</p>
-                            <p>₹ 1800</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img"><img src="images/Fashion/swet1.webp" alt="" height="280" width="240"></div>
-                        <div class="details">
-                            <p class="brand">Zara</p>
-                            <p class="pname">Women White Jacket</p>
-                            <p>₹ 1800</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img"><img src="images/Fashion/jacket2.webp" alt="" height="280" width="240"></div>
-                        <div class="details">
-                            <p class="brand">Zara</p>
-                            <p class="pname">Women White Jacket</p>
-                            <p>₹ 1800</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img"><img src="images/Fashion/top4.webp" alt="" height="280" width="240"></div>
-                        <div class="details">
-                            <p class="brand">Zara</p>
-                            <p class="pname">Women White Jacket</p>
-                            <p>₹ 1800</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img"><img src="images/Fashion/top3.webp" alt="" height="280" width="240"></div>
-                        <div class="details">
-                            <p class="brand">Zara</p>
-                            <p class="pname">Women White Jacket</p>
-                            <p>₹ 1800</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img"><img src="images/Fashion/dress1.webp" alt="" height="280" width="240"></div>
-                        <div class="details">
-                            <p class="brand">Zara</p>
-                            <p class="pname">Women White Jacket</p>
-                            <p>₹ 1800</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img"><img src="images/Fashion/swet5.webp" alt="" height="280" width="240"></div>
-                        <div class="details">
-                            <p class="brand">Zara</p>
-                            <p class="pname">Women White Jacket</p>
-                            <p>₹ 1800</p>
-                        </div>
-                    </div>
-                    
-                    
+                                        
                 </section>
                 <div id="pagination">
                     <div id="pagination-controls"></div>
@@ -227,98 +162,7 @@
 
     <script src="js/data/category.js"></script>
     <script src="js/data/products.js"></script>
-    <!-- <script>
-        function getQueryParam(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-
-        const urlParams = new URLSearchParams(window.location.search);
-
-        let productData = [];
-        let pageSize = 9;
-        let currentPage = 1;
-        const catId = getQueryParam('category');
-        var filteredCategory = category.find(cat => cat.id == catId);
-        var catname = filteredCategory.name;
-        var cathead = document.getElementById('cat-head');
-        if (urlParams.has('subcat')) {
-            const subCatId = getQueryParam('subcat');
-            var filteredSubCategory = subCategory.filter(sub => sub.catId == catId && sub.id == subCatId)[0];
-            catname += ` > ${filteredSubCategory.name}`
-            productData = products.filter(product => product.catId == catId && product.subCatId == subCatId);
-        } else {
-
-            productData = products.filter(product => product.catId == catId);
-        }
-        cathead.innerHTML = catname;
-
-        function renderProducts() {
-            let container = document.getElementById('right-panel');
-            container.innerHTML = '';
-
-
-            let start = (currentPage - 1) * pageSize;
-            let end = start + pageSize;
-
-
-            let paginatedProducts = productData.slice(start, end);
-
-            if (paginatedProducts.length > 0) {
-                paginatedProducts.forEach(product => {
-                    container.innerHTML += `
-                        <div>
-                            <i>
-                            <p>Name: ${product.name}</p>
-                            <p>Price: ${product.price}</p>
-                            <p>Image: ${product.image}</p>
-                            <p>catId: ${product.catId}</p>
-                            <p>subCatId: ${product.subCatId}</p>
-                            <a href="productPreview.html?pid=${product.id}"><button>Preview</button></a>
-                        </div>`;
-                });
-            } else {
-                container.innerHTML = `<p>No data</p>`;
-            }
-
-            if (productData.length > pageSize) {
-                paginationDivData();
-            }
-        }
-
-        function paginationDivData() {
-            let paginationContainer = document.getElementById('pagination-controls');
-            paginationContainer.innerHTML = ''; // Clear previous controls
-
-            let totalPages = Math.ceil(productData.length / pageSize);
-
-            if (currentPage > 1) {
-                paginationContainer.innerHTML += `<button onclick="changePage(currentPage - 1)">Previous</button>`;
-            }
-
-            for (let i = 1; i <= totalPages; i++) {
-                paginationContainer.innerHTML += `
-                    <button 
-                        onclick="changePage(${i})" 
-                        ${i === currentPage ? 'style="font-weight:bold"' : ''}>
-                        ${i}
-                    </button>`;
-            }
-
-            if (currentPage < totalPages) {
-                paginationContainer.innerHTML += `<button onclick="changePage(currentPage + 1)">Next</button>`;
-            }
-        }
-
-        function changePage(page) {
-            currentPage = page;
-            renderProducts();
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            renderProducts();
-        });
-    </script> -->
+    <script src="js/services/products.js"></script>
 
 </body>
 

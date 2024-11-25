@@ -53,9 +53,14 @@ body {
     height: 370px;
     width: 240px;
     background-color: white;
+    transition: box-shadow 0.2s ease-out;
 }
 #right-panel .card:hover{
-    box-shadow: 3px 3px 15px #a7b4c1;
+    box-shadow: 3px 3px 15px #a9bbcc;
+}
+#right-panel a{
+    text-decoration: none;
+    color: black;
 }
 .card{
     text-align: center;
@@ -71,8 +76,118 @@ body {
 .card .details .pname{
     font-size: 14px;
 }
-
+#cat-head{
+    margin-left: 304px;
+    font-size: 24px;
+    padding-bottom: 20px;
+    color: #155d9d;
+    color: black;
+}
 #pagination{
     text-align: center;
-    margin-top: 18px;
+    margin-top: 40px;
 }
+#pagination-controls button{
+    padding: 10px 15px;
+    background-color: #94a9bc;
+    border: 1px solid #9dbcd6;
+    color: white;
+}
+
+
+
+
+/* productPreview.html */
+#product-preview{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-color: white;
+    padding: 40px;
+}
+#product-preview .left-sec {
+    margin: auto;
+}
+#product-preview .left-sec img{
+    height: 420px;
+    width: 315px;
+}
+#product-preview #right-sec{
+    margin-left: 54px;
+    margin-top: 44px;
+}
+#product-preview .brand{
+    color: #4b78a0;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 1000;
+}
+#product-preview .name{
+    margin: 0px;
+    font-size: 39px;
+    font-weight: 700;
+    margin-top: 13px;
+}
+#product-preview .desc{
+    line-height: 28px;
+    color: gray;
+    margin-top: 24px;
+}
+#product-preview .price{
+    margin-top: 26px;
+    color: black;
+    font-size: 2rem;
+    font-weight: 1000;
+}
+#product-preview .size{
+    margin-top: 9px;
+    margin-bottom: 15px;
+}
+#product-preview .size button{
+    margin-top: 9px;
+    height: 34px;
+    width: 40px;
+    background-color: #94a9bc;
+    border: 1px solid #9dbcd6;
+    color: white;
+    background-color: #dae2e8;
+    border: 1px solid #dae2e8;
+    color: black;
+    cursor: pointer;
+}
+#product-preview .quantity{
+    display: inline;
+    margin-left: 12px;
+}
+#product-preview .quantity button{
+    height: 44px;
+    width: 45px;
+    font-size: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #dae2e8;
+    border: 1px solid #dae2e8;
+    color: black;
+}
+#product-preview .quantity input{
+    height: 45px;
+    width: 48px;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid gray;
+}
+.AddToCart{
+    height: 50px;
+    margin-left: 40px;
+    width: 197px;
+    background-color: #94a9bc;
+    border: 1px solid #94a9bc;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    
+}
+

@@ -67,33 +67,33 @@ const products = [
       "id": 9,
       "catId": 3,
       "subCatId": 8,
-      "name": "Saree",
+      "name": "Saree For Women",
       "price": 1000,
-      "image": "saree.jpg"
+      "image": "dress1.webp"
     },
     {
       "id": 10,
       "catId": 3,
       "subCatId": 8,
-      "name": "Skirt",
+      "name": "Skirt For Women",
       "price": 700,
-      "image": "skirt.jpg"
+      "image": "jacket1.jpg"
     },
     {
       "id": 11,
       "catId": 3,
       "subCatId": 9,
-      "name": "Shirt",
+      "name": "Shirt For Women",
       "price": 800,
-      "image": "shirt.jpg"
+      "image": "jacket2.webp"
     },
     {
       "id": 12,
       "catId": 3,
       "subCatId": 9,
-      "name": "T-shirt",
+      "name": "T-shirt For Women",
       "price": 500,
-      "image": "tshirt.jpg"
+      "image": "sda.webp"
     },
     {
       "id": 13,
@@ -163,49 +163,49 @@ const products = [
         "id": 21,
         "catId": 3,
         "subCatId": 8,
-        "name": "Anarkali Dress",
+        "name": "Anarkali Dress For Women",
         "price": 1500,
-        "image": "anarkali_dress.jpg"
+        "image": "jacket2.webp"
     },
     {
         "id": 22,
         "catId": 3,
         "subCatId": 8,
-        "name": "Lehenga Choli",
+        "name": "Lehenga Choli For Women",
         "price": 3000,
-        "image": "lehenga_choli.jpg"
+        "image": "shirt1.jpg"
     },
     {
         "id": 23,
         "catId": 3,
         "subCatId": 8,
-        "name": "Kurti",
+        "name": "Kurti For Women",
         "price": 800,
-        "image": "kurti.jpg"
+        "image": "swet1.webp"
     },
     {
         "id": 24,
         "catId": 3,
         "subCatId": 8,
-        "name": "Palazzo Pants",
+        "name": "Palazzo Pants For Women",
         "price": 700,
-        "image": "palazzo_pants.jpg"
+        "image": "swet2.webp"
     },
     {
         "id": 25,
         "catId": 3,
         "subCatId": 8,
-        "name": "Denim Jacket",
+        "name": "Denim Jacket For Women",
         "price": 1200,
-        "image": "denim_jacket.jpg"
+        "image": "swet4.webp"
     },
     {
         "id": 26,
         "catId": 3,
         "subCatId": 8,
-        "name": "Maxi Dress",
+        "name": "Maxi Dress For Women",
         "price": 2000,
-        "image": "maxi_dress.jpg"
+        "image": "swet5.webp"
     },
     {
         "id": 27,
@@ -213,7 +213,7 @@ const products = [
         "subCatId": 8,
         "name": "Crop Top",
         "price": 500,
-        "image": "crop_top.jpg"
+        "image": "top1.webp"
     },
     {
         "id": 28,
@@ -221,15 +221,15 @@ const products = [
         "subCatId": 8,
         "name": "Formal Blazer",
         "price": 2500,
-        "image": "formal_blazer.jpg"
+        "image": "top2.webp"
     },
     {
         "id": 29,
         "catId": 3,
         "subCatId": 8,
-        "name": "Pencil Skirt",
+        "name": "Pencil Skirt ",
         "price": 900,
-        "image": "pencil_skirt.jpg"
+        "image": "top3.webp"
     },
     {
         "id": 30,
@@ -237,7 +237,7 @@ const products = [
         "subCatId": 8,
         "name": "Evening Gown",
         "price": 4000,
-        "image": "evening_gown.jpg"
+        "image": "top4.webp"
     },
     {
         "id": 31,
