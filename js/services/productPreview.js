@@ -7,7 +7,6 @@ var productData = products.filter(product => product.id== pid);
 console.log(productData);
 
 var container = document.getElementById('product-preview');
-// productData.forEach(product => {
     container.innerHTML += `
             <div class="left-sec">
             <img src="images/Fashion/${productData[0].image}" alt="">
@@ -27,12 +26,22 @@ var container = document.getElementById('product-preview');
             </div>      
             <div style="margin-top: 40px;margin-left: 33px;"> 
             <div class="quantity">
-                <button id="minusBtn">−</button>
-                <input type="text" name="qty" value="0">
-                <button id="plusBtn">+</button>
+                <button id="minusBtn" onclick="sub()">−</button>
+                <input type="text" name="qty" id="qty" value="0">
+                <button id="plusBtn" onclick="add()">+</button>
             </div>
-            <button class="AddToCart">Add to Cart</button>
+            <button class="AddToCart" onclick="addToCart(${productData[0]})">Add to Cart</button>
         </div>  
          </div>
     `;
-// })
+
+
+var input = document.getElementById('qty');
+function add(){
+    input.value = parseInt(input.value) + 1;
+}
+function sub(){
+    if(input.value > 0){
+        input.value = parseInt(input.value) - 1;
+    }
+}
