@@ -6,6 +6,7 @@ const pid = getQueryParam('pid');
 var productData = products.filter(product => product.id== pid);
 console.log(productData);
 
+
 var container = document.getElementById('product-preview');
     container.innerHTML += `
             <div class="left-sec">
@@ -30,7 +31,7 @@ var container = document.getElementById('product-preview');
                 <input type="text" name="qty" id="qty" value="0">
                 <button id="plusBtn" onclick="add()">+</button>
             </div>
-            <button class="AddToCart" onclick="addToCart(${productData[0]})">Add to Cart</button>
+            <button class="AddToCart" onclick="addToCart(${productData[0].id})">Add to Cart</button>
         </div>  
          </div>
     `;
