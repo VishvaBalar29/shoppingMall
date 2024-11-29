@@ -16,7 +16,7 @@ function addToCart(pid) {
 
         if (existingProductIndex !== -1) {
             // If product already exists in the cart, update the quantity
-            cart[existingProductIndex].quantity += inputQuantity;
+            cart[existingProductIndex].quantity = inputQuantity;
         } else {
             // If product doesn't exist in the cart, add it as a new entry with the specified quantity
             const productWithQuantity = { ...product, quantity: inputQuantity };
@@ -26,8 +26,10 @@ function addToCart(pid) {
         // Save the updated cart back to localStorage
         localStorage.setItem('cart', JSON.stringify(cart));
 
-        console.log('Updated cart:', cart);
+        confirm("Product Added in Cart")
     } else {
         console.error('Product not found!');
     }
 }
+
+

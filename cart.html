@@ -55,61 +55,41 @@
             </div>
         </nav>
     </section>
-
+    <p style="text-align: center;margin: 34px 0px;font-size: 26px;">Your Shopping Cart</p>
     <section class="cart-main">
         <div id="cart-left-sec">
-            <div class="block">
-                <div class="img">
-                    <img src="images/Fashion/dress1.webp" alt="">
-                </div>
-                <div class="details">
-                    <p class="name">name : dfjskcnkdcnkdnc</p>
-                    <p class="price">₹ 1800 Rs.</p>
-                    <p class="brand">brand : ZARA</p>
-                    <div class="quantity">
-                        <button id="minusBtn" onclick="sub()">−</button>
-                        <input type="text" name="qty" id="qty" value="0">
-                        <button id="plusBtn" onclick="add()">+</button>
-                    </div>
-                    <p class="remove">Remove</p>
-                </div>
-            </div>
-
-            <div class="block">
-                <div class="img">
-                    <img src="images/Fashion/dress1.webp" alt="">
-                </div>
-                <div class="details">
-                    <p class="name">name : dfjskcnkdcnkdnc</p>
-                    <p class="price">₹ 1800 Rs.</p>
-                    <p class="brand">brand : ZARA</p>
-                    <div class="quantity">
-                        <button id="minusBtn" onclick="sub()">−</button>
-                        <input type="text" name="qty" id="qty" value="0">
-                        <button id="plusBtn" onclick="add()">+</button>
-                    </div>
-                    <p class="remove">Remove</p>
-                </div>
-            </div>
+           
+            
         </div>
         <div id="cart-right-sec">
             <p style="text-align: center;font-size: 18px;font-weight: 600;margin-bottom: 25px;">Order Summary</p>
-            <div style="display: flex;">
-                <div style="width: 80%;">
-                    <p>dfjl</p>
-                    <p>dfjl</p>
+            <div id="order">
+                <div id="total-head">
+                    <p>Sub Total</p>
+                    <p>Shipping</p>
+                    <p>Tax</p>
                 </div>
-                <div>
-                    <p>dfjl</p>
-                    <p>dfjl</p>
+                <div id="total">
+                    <p id="cart-total">0</p>
+                    <p>Free Shipping</p>
+                    <p>0</p>
                 </div>
+            </div>
+            <div id="f-total">
+                <p id="final-total">4274</p>
+            </div>
+            <div style="text-align: center;">
+                <button style="    height: 45px;
+                width: 100%;
+                margin: 34px 0px;background-color: #dae2e8;
+                border: 1px solid #dae2e8;cursor: pointer;font-size: 14px;">Proceed to Checkout</button>
             </div>
         </div>
         
 
     </section>
     
-    <!-- <script src="js/data/category.js"></script>
-    <script src="js/services/cart.js"></script> -->
+    <script src="js/data/category.js"></script>
+    <script src="js/services/cart.js"></script>
 </body>
 </html>
