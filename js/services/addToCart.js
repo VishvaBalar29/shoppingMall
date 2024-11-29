@@ -1,8 +1,6 @@
 function addToCart(pid) {
-    // Retrieve the existing cart from localStorage (or initialize an empty array if not present)
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Find the product by its ID
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];   
     const product = products.find(product => product.id == pid);
     console.log(product);
 
@@ -14,19 +12,20 @@ function addToCart(pid) {
         // Check if the product already exists in the cart
         const existingProductIndex = cart.findIndex(item => item.id === product.id);
 
-        if (existingProductIndex !== -1) {
+        if(inputQuantity == 0){
+            alert("Please add the quantity before proceeding!");
+        }
+        else if (existingProductIndex !== -1) {
             // If product already exists in the cart, update the quantity
-            cart[existingProductIndex].quantity = inputQuantity;
+            // cart[existingProductIndex].quantity = inputQuantity;
+            alert("This item is already in your cart.");
         } else {
-            // If product doesn't exist in the cart, add it as a new entry with the specified quantity
             const productWithQuantity = { ...product, quantity: inputQuantity };
             cart.push(productWithQuantity);
-        }
 
-        // Save the updated cart back to localStorage
-        localStorage.setItem('cart', JSON.stringify(cart));
-
-        confirm("Product Added in Cart")
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert("Your item has been successfully added to the cart.");
+        }       
     } else {
         console.error('Product not found!');
     }

@@ -1,9 +1,10 @@
 function getCartItems() {
-    // Retrieve the cart from localStorage, or initialize as an empty array if not present
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     console.log("hekl");
     if (cart.length === 0) {
         console.log('Cart is empty!');
+        let container = document.getElementById("cart-left-sec");
+        container.innerHTML += `<p style="color:#d10a0a">Don’t miss out! Add items in your cart now. 🛒</p>`;
     } else {
         console.log('Cart items:', cart);
 
@@ -18,7 +19,7 @@ function getCartItems() {
                     <img src="images/${catname.name}/${product.image}" alt="">
                 </div>
                 <div class="details">
-                    <p class="name">${product.id}/${product.name}</p>
+                    <p class="name">${product.name}</p>
                     <p class="price" id="price_${product.id}">₹ ${price.toFixed(2)}</p> <!-- Assign unique id here -->
                     <p class="brand">ZARA</p>
                     <div class="quantity">
@@ -77,34 +78,29 @@ function updateCartQuantity(productId, newQuantity) {
 
 function removeFromCart(productId) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Filter out the product to remove it
     cart = cart.filter(p => p.id !== productId);
-
-    // Save the updated cart back to localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Re-render the cart items after removing the product
     getCartItems();
 }
 
 function calculateTotal(cart) {
     let total = 0;
-
     cart.forEach(product => {
-        total += product.price * product.quantity;  // Calculate price for each product and add to total
+        total += product.price * product.quantity;  
     });
-
     let totalElement = document.getElementById("cart-total");
     let totalElement2 = document.getElementById("final-total");
     if (totalElement) {
         totalElement.innerHTML = `₹ ${total.toFixed(2)}`;
         totalElement2.innerHTML = `₹ ${total.toFixed(2)}`;
     } else {
-        // If there's no total element, create and append it
         let newTotalElement = document.createElement("p");
         newTotalElement.id = "cart-total";
         newTotalElement.innerHTML = `Total: ₹ ${total.toFixed(2)}`;
         document.getElementById("cart-left-sec").appendChild(newTotalElement);
     }
+}
+
+function confirmOrder(){
+    localStorage.removeItem('cart');
 }

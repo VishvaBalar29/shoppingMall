@@ -16,15 +16,19 @@ var container = document.getElementById('product-preview');
             <p class="brand">${productData[0].name}</p>
             <p class="name">${productData[0].name}</p>
             <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi eveniet ipsa quis atque neque repellat?Cupiditate facere, voluptatum quibusdam magni eaque voluptates quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo omnis veritatis cumque velit, dolorum praesentium </p>
-            <p class="price">₹ ${productData[0].price}</p>
-            <div class="size">
+            <p class="price">₹ ${productData[0].price}    
+            ${productData[0].catId == 1 ? 
+                `<span style="font-size: 17px;color: gray;font-weight: 400;">per 1Kg</span>` : ""}
+            </p>
+            ${productData[0].Id==3 ? 
+                `<div class="size">
                 <span>size : </span>
                 <button>XS</button>
                 <button>S</button>
                 <button>L</button>
                 <button>XL</button>
                 <button>XLL</button>
-            </div>      
+            </div>` : ""}
             <div style="margin-top: 40px;margin-left: 33px;"> 
             <div class="quantity">
                 <button id="minusBtn" onclick="sub()">−</button>
