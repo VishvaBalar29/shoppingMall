@@ -6,47 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Mall</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <a href="signUp.html">
     <a href="login.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        .grid{
-            width: 90vw;
-            margin: 40px auto;
-            min-height: 90svh;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 5px;
-        }
-        .grid div{
-            cursor: pointer;
-
-        }
-        .grid .grid1{
-            background-image: url('images/Home/bread.webp');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        .grid .grid2{
-            grid-column: span 2;
-            background-image: url('images/Home/vegetables.webp');
-            background-size: cover;
-        }
-        .grid .grid3{
-            grid-row: span 2;
-            background-image: url('images/Home/fashion.jpg');
-            background-size: cover;
-        }
-        .grid .grid4{
-            grid-column: span 2;
-            background-image: url('images/Home/beauty.jpg');
-            background-size: cover;
-        }
-        .grid .grid5{
-            background-image: url('images/Home/decor.webp');
-            background-size: cover;
-        }
+        
+        
     </style>
 </head>
 
@@ -77,7 +43,7 @@
                     <input type="text" placeholder="Search...">
                 </div>
                 <div>
-                    <a href="login.html" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><a>
+                    <a href="cart.html" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><a>
                 </div>
 
                 <div id="iconDropdown">
@@ -97,41 +63,96 @@
     </section>
 
     <section class="main">
-       <div class="grid">
-            <div class="grid1"></div>
-            <div class="grid2"><p style="    padding: 100px 0px 0px 38px;
-                color: white;
-                font-size: 30px;
-                font-style: italic;
-                font-weight: 1600;
-                letter-spacing: 3px;
-                font-weight: 500;">ORGANIC Veggies & <br>FRESH Fruits </p>
-                <button style="ackground: white;
-                color: brown;
-                border: 1px solid white;
-                margin-left: 35px;
-                margin-top: 12px;
-                padding: 7px 16px;
-                border-radius: 103px;
-                width: 80px;
-                font-size: 10px;">Explore</button></div>
-            <div class="grid3"><p style="color: white;
-                text-align: center;
-                font-size: 30px;
-                font-style: italic;
-                font-weight: 900;
-                padding-top: 250px;
-                letter-spacing: 10px;">ELEVATE <br>STYLE</p></div>
-            <div class="grid4"></div>
-            <div class="grid5" style="    text-align: center;
-            color: #f9e1bc;
-            font-size: 28px;
-            font-style: italic;
-            padiing-top: 198px;
-            padding-top: 19px;
-            font-weight: 900;
-            letter-spacing: 3px;"><p>DECOR</p></div> 
+    <div>   
+        <div class="head">
+            <p class="quote">Your One-Stop Shop for Fresh, Fashion, and Home!</p>
+            <p class="quote-detail">"Welcome to your ultimate destination for all things fresh, fashionable, and functional! Whether you're looking for farm-fresh fruits and vegetables, trendy fashion to elevate your style, or elegant home decor to enhance your living space, we've got it all. Experience the joy of seamless shopping, Discover a world where freshness meets fashion, and style meets comfort—because you deserve the best, all in one place!"</p>
+        </div>
+        <div class="grid">
+            <div class="grid1">
+                <a href="products.html?category=2"><button>Explore</button></a>
+            </div>
+            <div class="grid2">
+                <p>ORGANIC VEGGIES & <br>FRESH FRUITS </p>
+                <a href="products.html?category=1"><button>Explore</button></a>
+            </div>
+            <div class="grid3">
+                <p>ELEVATE <br>STYLE</p>
+                <a href="products.html?category=3"><button>Explore</button></a>
+            </div>
+            <div class="grid4">
+                <a href="products.html?category=4"><button>Explore</button></a>
+            </div>
+            <div class="grid5">
+                <p>DECOR</p>
+                <a href="products.html?category=5"><button>Explore</button></a>
+            </div> 
        </div>
+    </div>
+
+    <div class="service-main">
+        <p style="text-align: center;
+        font-size: 25px;
+        padding-top: 30px;font-weight: 500;color: #033e6a;">Convenience.  &nbsp;Quality.  &nbsp;Delivered.</p>
+        <div class="service">
+            <div class="card line">
+                <img src="images/services/shipping.png" alt="" >
+                <p class="head">Free Delievery <br><span>Delivered Fast to Your Doorstep.</span> </p>
+            </div>
+            <div class="card line">
+                <img src="images/services/24-hours.png" alt="">
+                <p class="head">24/7 Customer Support<br><span>We're Here to Help Anytime.</span> </p>
+                
+            </div>
+            <div class="card line">
+                <img src="images/services/location.png" alt="">
+                <p class="head">Track Your Order<br><span>Hassle-Free Returns for Your Peace of Mind.</span> </p>
+            </div>
+            <div class="card">
+                <img src="images/services/receiving.png" alt="">
+                <p class="head">Easy Returns & Refunds<br><span>Stay Updated with Real-Time Order Tracking.</span> </p>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="home-cat-sec">
+        <p class="head">Most Popular Categories</p>
+        <div class="cats">
+            <div class="cat1">
+                <img src="images/Home/category/vegetable.avif" alt="">
+                <a href="products.html?category=1&subcat=2"><p>Vegetables</p></a>
+            </div>
+            <div class="cat2">
+                <img src="images/Home/category/bread.avif" alt="">
+                <a href="products.html?category=2&subcat=4"><p>Breads & Buns</p></a>
+            </div>
+            <div class="cat3">
+                <img src="images/Home/category/vase.jpg" alt="">
+                <a href="products.html?category=5&subcat=14"><p>Vases</p></a>
+            </div>
+            <div class="cat4">
+                <img src="images/Home/category/cake.png" alt="">
+                <a href="products.html?category=2&subcat=5"><p>Cakes</p></a>
+            </div>
+            <div class="cat5">
+                <img src="images/Home/category/women.png" alt="">
+                <a href="products.html?category=3&subcat=8"><p>Women's style</p></a>
+            </div>
+            <div class="cat6">
+                <img src="images/Home/category/skincare.jpg" alt="">
+                <a href="products.html?category=4&subcat=12"><p>SkinCare</p></a>
+            </div>
+            <div class="cat7">
+                <img src="images/Home/category/lamps.jpg" alt="">
+                <a href="products.html?category=5&subcat=16"><p>Lamps & Lighting</p></a>
+            </div>
+            <div class="cat8">
+                <img src="images/Home/category/haircare.webp" alt="">
+                <a href="products.html?category=4&subcat=13"><p>Haircare</p></a>
+            </div>
+        </div>
+    </div>
     </section>
        
 </body>
