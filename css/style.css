@@ -8,8 +8,8 @@ body {
     padding: 0px;
 }
 nav li{
-    list-style-type: none;
-    text-decoration: none;
+    /* list-style-type: none;
+    text-decoration: none; */
     display: inline;
 }
 nav a{

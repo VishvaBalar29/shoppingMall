@@ -6,14 +6,23 @@
     grid-template-columns: 1fr 1fr;
     text-align: center;
 }
+.sec-1 .grid-1{
+    text-align: left;
+    margin-left: 140px;
+}
 .sec-1 .grid-1 .head{
     font-size: 30px;
-    padding-top: 20px;
     font-weight: 500;
     color: black;
+    margin: 20px 0px;
+}
+.sec-1 .grid-1 li{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 26px 0px;
 }
 .sec-1 .grid-2 img{
-    height: 416px;
-    width: 526px;
-
+    height: 436px;
+    width: 546px;
+    margin-top: 12px;
 }
