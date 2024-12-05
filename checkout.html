@@ -6,6 +6,7 @@
     <title>Checkout Page</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <section class="navbar">
@@ -64,23 +65,23 @@
                     <p class="sub-head">Address Information</p>
                     <div class="input-group">
                         <label for="address1" style="margin-top: 42px;">Address 1</label>
-                        <input type="text" id="address1" name="address1" required>
+                        <input value="dummy" type="text" id="address1" name="address1" required>
                     </div>
                     <div class="input-group">
                         <label for="address2">Address 2</label>
-                        <input type="text" id="address2" name="address2">
+                        <input value="dummy" type="text" id="address2" name="address2">
                     </div>
                     <div class="input-group">
                         <label for="city">City</label>
-                        <input type="text" id="city" name="city" required>
+                        <input value="dummy" type="text" id="city" name="city" required>
                     </div>
                     <div class="input-group">
                         <label for="state">State</label>
-                        <input type="text" id="state" name="state" required>
+                        <input value="dummy" type="text" id="state" name="state" required>
                     </div>
                     <div class="input-group">
                         <label for="zip">Zip Code</label>
-                        <input type="text" id="zip" name="zip" required>
+                        <input value="dummy" type="text" id="zip" name="zip" required>
                     </div>
                 </div>
 
@@ -98,27 +99,29 @@
                     </div>
                     <div class="input-group">
                         <label for="cardname">Name on Card</label>
-                        <input type="text" id="cardname" name="cardname" required>
+                        <input value="dummy" type="text" id="cardname" name="cardname" required>
                     </div>
                     <div class="input-group">
                         <label for="cardnumber">Credit Card Number</label>
-                        <input type="text" id="cardnumber" name="cardnumber" placeholder="0000 0000 0000" required>
+                        <input value="dummy" type="text" id="cardnumber" name="cardnumber" placeholder="0000 0000 0000" required>
                     </div>
                     <div class="input-group">
                         <label for="expmonth">Exp. Month/Year</label>
-                        <input type="text" id="expmonth" name="expmonth" placeholder="MM/YY" required>
+                        <input value="dummy" type="text" id="expmonth" name="expmonth" placeholder="MM/YY" required>
                     </div>
                     <div class="input-group">
                         <label for="cvv">CVV</label>
-                        <input type="text" id="cvv" name="cvv" required>
+                        <input value="dummy" type="text" id="cvv" name="cvv" required>
                     </div>
                 </div>
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="checkout-btn">Proceed to Checkout</button>
+            <button type="submit" class="checkout-btn" onclick="placeOrder()" >Proceed to Checkout</button>
         </form>
     </div>
 </section>
+<script src="js/services/placeOrder.js"></script>
+
 </body>
 </html>

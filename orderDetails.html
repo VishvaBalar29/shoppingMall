@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/orderDetails.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <section class="navbar">
+        <nav>
+            <div style=" display: flex;align-items: center;">
+                <a href="index.html">
+                    <div id="logo">QuickMart</div>
+                </a>
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html?category=1">Fruits & Vegetables</a></li>
+                    <li><a href="products.html?category=2">Bakery</a></li>
+                    <li><a href="products.html?category=3">Fashion</a></li>
+                    <li><a href="products.html?category=4">Beauty</a></li>
+                    <li><a href="products.html?category=5">Decor</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+
+
+            <div class="right-sec">
+                <div>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div>
+                    <a href="cart.html" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><a>
+                </div>
+
+                <div id="iconDropdown">
+                    <i class="fas fa-user"> </i>
+
+                    <div id="iconDropdownContent">
+                        <a href="login.html">Login</a>
+                        <a href="signup.html">SignUp</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="logout.html">Logout</a>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </section>
+
+    <p class="head">Your Orders</p>
+    <section class="main">
+        <table class="main-table">
+            <colgroup>
+                <col style="width: 5%;"> 
+                <col style="width: 50%;"> 
+                <col style="width: 25%;"> 
+                <col style="width: 15%;"> 
+                <col style="width: 5%;"> 
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Items</th>
+                    <th>Shipping Address</th>
+                    <th>Card Number</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>O1</td>
+                    <td>
+                            <table class="sub-table" >
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="images/Fashion/dress1.webp" alt=""></td>
+                                        <td>Women Party Dress</td>
+                                        <td>500 Rs</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/Fashion/swet1.webp" alt=""></td>
+                                        <td>Women Sweat t-shirt</td>
+                                        <td>1000 Rs</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/Fashion/top1.webp" alt=""></td>
+                                        <td>dskdlskldklsmfklfrdeefjk</td>
+                                        <td>500 Rs</td>
+                                        <td>10</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4">
+                                            <div>
+                                                <span style="padding-right: 15px;">Total:</span>
+                                                <strong>₹ 1500</strong>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                                
+                            </table>
+                    </td>
+                    <td style="text-align: left;padding: 12;">
+                        <p>A-1,202, Saurashtra township,Mota varachha, Surat</p>
+                        <p>City : Surat</p>
+                        <p>State : Gujarat</p>
+                    </td>
+                    <td>1234 2344 2324</td>
+                    <td>12/02/2023</td>
+                </tr>
+
+                <tr>
+                    <td>O1</td>
+                    <td>
+                            <table class="sub-table" >
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="images/Fashion/dress1.webp" alt=""></td>
+                                        <td>Women Party Dress</td>
+                                        <td>500 Rs</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/Fashion/top1.webp" alt=""></td>
+                                        <td>dskdlskldklsmfklfrdeefjk</td>
+                                        <td>500 Rs</td>
+                                        <td>10</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4">
+                                            <div>
+                                                <span style="padding-right: 15px;">Total:</span>
+                                                <strong>₹ 1500</strong>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                                
+                            </table>
+                    </td>
+                    <td style="text-align: left;padding: 12;">
+                        <p>A-1,202, Saurashtra township,Mota varachha, Surat</p>
+                        <p>City : Surat</p>
+                        <p>State : Gujarat</p>
+                    </td>
+                    <td>1234 2344 2324</td>
+                    <td>12/02/2023</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- <table>
+
+        <tbody id="orderContent">
+        </tbody>
+    </table>
+    <script src="js/services/displayOrder.js"></script> -->
+</body>
+</html>
