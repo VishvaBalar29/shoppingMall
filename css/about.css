@@ -1,0 +1,19 @@
+.sec-1{
+    margin-top: 50px;
+}
+.sec-1 .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+.sec-1 .grid-1 .head{
+    font-size: 30px;
+    padding-top: 20px;
+    font-weight: 500;
+    color: black;
+}
+.sec-1 .grid-2 img{
+    height: 416px;
+    width: 526px;
+
+}

@@ -107,14 +107,16 @@
     padding: 56px 0px 10px 0px;
     letter-spacing: 2px;
     font-weight: 500;
-    color: #033e6a;
+    /* color: #033e6a; */
+    color: black;
 }
 .quote-detail{
     text-align: center;
     width: 60%;
     margin: auto;
     padding: 50px 0px;
-    color: #4d687d;
+    /* color: #4d687d; */
+    color: gray;
     line-height: 31px;
 }
 .service{
@@ -128,7 +130,8 @@
 .service .card{
     display: flex;
     align-items: center;
-    color: #033e6a;;
+    color: #033e6a;
+    color: black;
 }
 .service .line{
     border-right: 1px solid black;
@@ -177,13 +180,14 @@
 }
 .cats div a{
     text-decoration: none;
+    color: black;
 }
 .home-cat-sec .head{
     text-align: center;
     font-size: 25px;
     padding-top: 30px;
     font-weight: 500;
-    color: #033e6a;
+    color: black;
 }
 .home-cat-sec .cats .cat4, 
 .home-cat-sec .cats .cat8 {
