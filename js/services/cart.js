@@ -101,6 +101,3 @@ function calculateTotal(cart) {
     }
 }
 
-function confirmOrder(){
-    localStorage.removeItem('cart');
-}
