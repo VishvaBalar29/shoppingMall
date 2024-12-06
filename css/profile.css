@@ -16,13 +16,10 @@ body{
     border-radius: 10px;
 }
 #profile-img{
-    margin-top: 23px;
-    height: 150px;
-    width: 135px;
+    height: 180px;
+    width: 175px;
     text-align: center;
-    background-color: #eef2f4;
     padding: 13px;
-    border-radius: 10px;
 }
 
 .profile .details{
@@ -41,7 +38,7 @@ body{
     height: 100px;
     width: 130px;
     text-align: center;    
-    box-shadow: 5px 6px 10px #dccfcf;
+    box-shadow: 3px 3px 10px #dccfcf;
     cursor: pointer;
 }
 .profile .service img{
