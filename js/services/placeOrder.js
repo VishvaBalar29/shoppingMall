@@ -1,6 +1,56 @@
-function placeOrder() {
+function checkValidation(event) {
+    // Prevent form submission
     event.preventDefault();
-    // alert("Hey we are placing order..");
+    console.log("checkdlk");
+    
+    // Get form values
+    const address1 = document.getElementById("address1").value.trim();
+    const city = document.getElementById("city").value.trim();
+    const state = document.getElementById("state").value.trim();
+    const zip = document.getElementById("zip").value.trim();
+    const cardName = document.getElementById("cardname").value.trim();
+    const cardNumber = document.getElementById("cardnumber").value.trim();
+    const expMonthYear = document.getElementById("expmonth").value.trim();
+    const cvv = document.getElementById("cvv").value.trim();
+
+    // Regex for validation
+    const zipRegex = /^\d{6}(-\d{4})?$/; // US Zip code
+    const cardNumberRegex = /^\d{16}$/; // 16-digit card number
+    const expMonthYearRegex = /^(0[1-9]|1[0-2])\/\d{2}$/; // MM/YY format
+    const cvvRegex = /^\d{3}$/; // 3 or 4 digit CVV
+
+    if (!address1) {
+        alert("Address 1 is required.");
+    }
+    else if (!city) {
+        alert("City is required.");
+    }
+    else if (!state) {
+        alert("State is required.");
+    }
+    else if (!zip || !zipRegex.test(zip)) {
+        alert("Please enter a valid Zip Code.");
+    }
+
+    else if (!cardName) {
+        alert("Name on card is required.");
+    }
+    else if (!cardNumber || !cardNumberRegex.test(cardNumber)) {
+        alert("Please enter a valid 16-digit Credit Card Number.");
+    }
+    else if (!expMonthYear || !expMonthYearRegex.test(expMonthYear)) {
+        alert("Please enter the Expiration Date in MM/YY format.");
+    }
+    else if (!cvv || !cvvRegex.test(cvv)) {
+        alert("Please enter a valid CVV (3 or 4 digits).");
+    }
+    else{
+        placeOrder(event);
+    }
+}
+
+function placeOrder(event) {
+    event.preventDefault();
     
     let order = JSON.parse(localStorage.getItem('order')) || [];
 
@@ -17,7 +67,7 @@ function placeOrder() {
     if(cart.length > 0){
         let newOrder = 
         {
-            "orderId" : `S${(order.length) + 1}`,
+            "orderId" : `O${(order.length) + 1}`,
             "orderItems" : cart,
             "address" : {
                 "address1" : document.getElementById('address1').value ,
@@ -39,11 +89,9 @@ function placeOrder() {
         localStorage.setItem('order', JSON.stringify(order));
         localStorage.setItem('cart',JSON.stringify([]));
         alert("Thank you your order has been successfully placed.");
-        window.location.href = "orderDetails.html";
+        window.location.href = "confirm.html";
     }  
-    else{
-        alert("There is nothing to place order. Please add items to cart before placing order.")
-    }
+    
 }
 
 

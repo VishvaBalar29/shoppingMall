@@ -101,3 +101,12 @@ function calculateTotal(cart) {
     }
 }
 
+function goOnPayment(){
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if(cart.length == 0){
+        alert("Please add the item in cart");
+    }
+    else{
+        window.location = "checkout.html";
+    }
+}

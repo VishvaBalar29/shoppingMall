@@ -52,8 +52,9 @@ th,td{
 }
 .sub-table tfoot div{
     position: relative;
-    right: -190px;
+    right: -180px;
 }
+
 td{
     font-size: 13px;
 }
