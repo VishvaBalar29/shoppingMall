@@ -1,0 +1,75 @@
+
+.main{
+    width: 75%;
+    padding: 40px 40px;
+    margin: auto;
+    border-radius: 10px;
+}
+.div{
+    margin: auto;
+}
+.header{
+    text-align: center;
+    margin: 35px 0px 10px 0px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.header button{
+    height: 36px;
+    width: 126px;
+    font-size: 12px;
+    color: white;
+    background-color: #94a9bc;
+    border: 1px solid #94a9bc;
+    border-radius: 4px;
+    cursor: pointer;margin-left: 13px;
+}
+.header button:hover {
+    background-color: #61788e;
+}
+.reviews{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1%;
+}
+.card{
+    border: 1px solid #dad4d4;
+    height: 310px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.card img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+.card .name{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 12px 0px 2px 0px;
+}
+.time{
+    font-size: 12px;
+    color: gray;
+}
+.review{
+    font-size: 14px;
+    padding-top: 13px;
+    line-height: 1.5rem;
+    color: rgb(105, 105, 105);
+}
+.stars{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 12px;
+    gap: 1.5%;
+}
+.stars img{
+    height: 15px;
+    width: 15px;
+}
+.header .stars{
+    gap: 0.5%;
+}

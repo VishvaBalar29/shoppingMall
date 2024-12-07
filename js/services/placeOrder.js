@@ -12,6 +12,7 @@ function checkValidation(event) {
     const cardNumber = document.getElementById("cardnumber").value.trim();
     const expMonthYear = document.getElementById("expmonth").value.trim();
     const cvv = document.getElementById("cvv").value.trim();
+    const error = document.getElementById("error");
 
     // Regex for validation
     const zipRegex = /^\d{6}(-\d{4})?$/; // US Zip code
@@ -20,29 +21,28 @@ function checkValidation(event) {
     const cvvRegex = /^\d{3}$/; // 3 or 4 digit CVV
 
     if (!address1) {
-        alert("Address 1 is required.");
+        error.innerHTML = "*Address is required";
     }
     else if (!city) {
-        alert("City is required.");
+        error.innerHTML = "*City is required.";
     }
     else if (!state) {
-        alert("State is required.");
+        error.innerHTML = "*State is required.";
     }
     else if (!zip || !zipRegex.test(zip)) {
-        alert("Please enter a valid Zip Code.");
+        error.innerHTML = "*Please enter a valid Zip Code.";
     }
-
     else if (!cardName) {
-        alert("Name on card is required.");
+        error.innerHTML = "*Name on card is required.";
     }
     else if (!cardNumber || !cardNumberRegex.test(cardNumber)) {
-        alert("Please enter a valid 16-digit Credit Card Number.");
+        error.innerHTML = "*Please enter a valid 16-digit Credit Card Number.";
     }
     else if (!expMonthYear || !expMonthYearRegex.test(expMonthYear)) {
-        alert("Please enter the Expiration Date in MM/YY format.");
+        error.innerHTML = "*Please enter the Expiration Date in MM/YY format.";
     }
     else if (!cvv || !cvvRegex.test(cvv)) {
-        alert("Please enter a valid CVV (3 or 4 digits).");
+        error.innerHTML = "*Please enter a valid CVV (3 or 4 digits).";
     }
     else{
         placeOrder(event);

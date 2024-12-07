@@ -155,21 +155,21 @@
 
 .home-cat-sec .cats{   
     display: grid;
-    margin: 40px 10rem;
+    margin: 40px 12rem;
     grid-template-columns: auto auto auto auto;
 
 }
 .cats div{
-    height: 350px;
-    width: 305px;
+    height: 310px;
+    width: 283px;
     border: 1px solid gray;
     border-right: none;  
     border-bottom: none; 
     text-align: center;
 }
 .cats div img{
-    height: 225px;
-    width: 210px;
+    height: 200px;
+    width: 180px;
     margin: auto;
     padding-top: 52px;
     
