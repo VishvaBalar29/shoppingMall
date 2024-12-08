@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         /* Sign-Up Form Styles */
         .signup-container {
-            background-color: lightblue;
+            background-color:white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 400px;
+            align-self: center;
+    
         }
 
         h2 {
@@ -43,13 +49,13 @@
         }
 
         input:focus {
-            border-color: skyblue;
+            border-color: white;
             outline: none;
         }
 
         button {
             padding: 12px;
-            background-color: #6ed0c0;
+            background-color: #a3b5c0;
             color: white;
             border: none;
             border-radius: 4px;
@@ -58,7 +64,7 @@
         }
 
         button:hover {
-            background-color: #ab0993;
+            background-color: #dad5cf;
         }
 
         /* Responsive Design */
@@ -72,6 +78,52 @@
     </style>
 </head>
 <body>
+    
+    <section class="navbar">
+        <nav>
+            <div style=" display: flex;align-items: center;">
+                <a href="index.html">
+                    <div id="logo">AllInOne</div>
+                </a>
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html?category=1">Fruits & Vegetables</a></li>
+                    <li><a href="products.html?category=2">Bakery</a></li>
+                    <li><a href="products.html?category=3">Fashion</a></li>
+                    <li><a href="products.html?category=4">Beauty</a></li>
+                    <li><a href="products.html?category=5">Decor</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">Review</a></li>
+                </ul>
+            </div>
+
+
+            <div class="right-sec">
+                <div>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div>
+                    <a href="cart.html" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><a>
+                </div>
+
+                <div id="iconDropdown">
+                    <i class="fas fa-user"> </i>
+
+                    <div id="iconDropdownContent">
+                        <a href="login.html">Login</a>
+                        <a href="signup.html">SignUp</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="logout.html">Logout</a>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </section>
     <div class="signup-container">
         <h2>Sign Up</h2>
         <form action="#" method="post" class="signup-form">
