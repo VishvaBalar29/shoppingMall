@@ -88,7 +88,6 @@ function placeOrder(event) {
         order.push(newOrder);
         localStorage.setItem('order', JSON.stringify(order));
         localStorage.setItem('cart',JSON.stringify([]));
-        alert("Thank you your order has been successfully placed.");
         window.location.href = "confirm.html";
     }  
     
