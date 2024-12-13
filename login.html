@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         div{
-            background-color: #67e0e0;
+            background-color: #a3b5c0;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -16,8 +16,8 @@
         }
         button{
             padding: 12px;
-            background-color: #6ed0c0;
-            color: white;
+            background-color:#dad5cf ;
+            color: black;
             border: none;
             border-radius: 4px;
             font-size: 16px;
@@ -27,63 +27,19 @@
 </head>
 <body>
   
-  <section class="navbar">
-    <nav>
-        <div style=" display: flex;align-items: center;">
-            <a href="index.html">
-                <div id="logo">AllInOne</div>
-            </a>
-        </div>
-
-        <div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html?category=1">Fruits & Vegetables</a></li>
-                <li><a href="products.html?category=2">Bakery</a></li>
-                <li><a href="products.html?category=3">Fashion</a></li>
-                <li><a href="products.html?category=4">Beauty</a></li>
-                <li><a href="products.html?category=5">Decor</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="about.html">Review</a></li>
-            </ul>
-        </div>
-
-
-        <div class="right-sec">
-            <div>
-                <input type="text" placeholder="Search...">
-            </div>
-            <div>
-                <a href="cart.html" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><a>
-            </div>
-
-            <div id="iconDropdown">
-                <i class="fas fa-user"> </i>
-
-                <div id="iconDropdownContent">
-                    <a href="login.html">Login</a>
-                    <a href="signup.html">SignUp</a>
-                    <a href="profile.html">Profile</a>
-                    <a href="logout.html">Logout</a>
-                    
-                </div>
-            </div>
-
-        </div>
-    </nav>
-</section>
     <form >
         <div class="div">
-          <label for="uname"><b>Username</b></label>
+          <label for="uname"><b>Username:</b></label>
           <input type="text" placeholder="Enter Username" name="uname" required><br><br>
     
-          <label for="psw"><b>Password</b></label>
+          <label for="psw"><b>Password:</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required><br><br>
-    
-          <button type="submit">Login</button><br><br>
+          
+          <button type="submit" class="button" onclick="checkValidation(event)" >Login</button><br><br>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
+          
         </div>
       </form>
 </body>
