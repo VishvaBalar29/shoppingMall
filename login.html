@@ -29,18 +29,20 @@
   
     <form >
         <div class="div">
-          <label for="uname"><b>Username:</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+          <label for="email"><b>Email:</b></label>
+          <input type="text" placeholder="Enter Email" id="email" name="email" required><br><br>
     
-          <label for="psw"><b>Password:</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+          <label for="password"><b>Password:</b></label>
+          <input type="password" placeholder="Enter Password" id="password" name="password" required><br><br>
           
-          <button type="submit" class="button" onclick="checkValidation(event)" >Login</button><br><br>
+          <button type="submit" class="button" onclick="loginUser(event)" >Login</button><br><br>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
-          
+          <p id="error" style="color: rgb(205, 28, 28);margin-left: 15px;"></p>
         </div>
       </form>
+<script src="js/services/loginUser.js"></script>
+
 </body>
 </html>

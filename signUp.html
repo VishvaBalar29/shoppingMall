@@ -117,7 +117,7 @@
                         <a href="login.html">Login</a>
                         <a href="signup.html">SignUp</a>
                         <a href="profile.html">Profile</a>
-                        <a href="logout.html">Logout</a>
+                        <a href="logOut(event).html">Log Out</a>
                         
                     </div>
                 </div>
@@ -140,10 +140,11 @@
 
             <label for="confirm-password">Confirm Password</label>
             <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
-
-            <button type="submit">Sign Up</button>
+            <p id="error" style="color: rgb(205, 28, 28);margin-left: 15px;"></p>
+            <button type="submit" class="checkout-btn" onclick="signUpUser(event)" >Sign Up</button>
             
         </form> 
     </div>
+<script src="js/services/signUpUser.js"></script>
 </body>
 </html>

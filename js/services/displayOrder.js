@@ -1,9 +1,3 @@
-
-
-
-
-
-
 let orderContent = document.getElementById('orderContent');
 
 let orders = JSON.parse(localStorage.getItem('order')) || [];
