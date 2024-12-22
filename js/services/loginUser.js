@@ -4,12 +4,20 @@ function checLoginkValidation(
   error
 ) {
   console.log("Validating user!!");
+  const emailErr = document.getElementById("emailErr");
+  const pswdErr = document.getElementById("pswdErr");
+  const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  emailErr.innerHTML = "";
+  pswdErr.innerHTML = "";
 
   let success = false;
   if (!email) {
-    error.innerHTML = "*Email is required.";
+    emailErr.innerHTML = "*Email is required.";
+  } else if(!regex.test(email)){
+    emailErr.innerHTML = "*Invalid email address. Please enter a valid email.";
   } else if (!password) {
-    error.innerHTML = "*Password is required.";
+    pswdErr.innerHTML = "*Password is required.";
   } else {
     success = true;
   }

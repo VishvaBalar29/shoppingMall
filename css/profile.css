@@ -1,54 +1,67 @@
-body{
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.grid-container {
+    width: 54%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; 
+    grid-template-rows: 250px 250px;
+    gap: 10px; 
+    padding: 70px 0px;
+}
+.container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    /* background-color: #f4f4f4; */
+}
+.container-1 {
+    grid-row: span 2; 
     background-color: #f4f4f4;
 }
-.main-sec{
-    margin: auto;
-    display: flex;
-    justify-content: center;
+#profile-img img{
+    height: 150px;
+    width: 150px;
 }
-.profile{
-    width: 40%;
-    display: grid;
-    grid-template-columns: 0.6fr 0.8fr;
-    padding: 28px 0px;
-    margin: 63px 0px;
-    background-color: white;
-    border-radius: 10px;
-}
-#profile-img{
-    height: 180px;
-    width: 175px;
-    text-align: center;
-    padding: 13px;
-}
-
-.profile .details{
-    padding-top: 10px;
-}
-.profile .details p{
+.container-1 #username{
+    font-weight: bold;
     font-size: 17px;
-    line-height: 37px;
+    margin-bottom: 6px;
 }
-.profile .service{
-    padding-top: 15px;
-    display: flex;
-    gap: 10%;
+.container-1 #email{
+    font-size: 14px;
+    color: rgb(96, 96, 96);
+    margin-bottom: 16px;
 }
-.profile .service div{
-    height: 100px;
-    width: 130px;
-    text-align: center;    
-    box-shadow: 3px 3px 10px #dccfcf;
+.container button{
+    width: 95%;
+    background-color: #94a9bc;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
     cursor: pointer;
+    margin-bottom: 28px;
 }
-.profile .service img{
-    height: 50px;
-    width: 50px;
+.container button:hover{
+    background-color: #61788e;
 }
-.profile .service p{
-    font-size: 13px;
-    color: rgb(8, 8, 135);
+.container-1 #list{
+    text-align: left;
+    margin-top: 15px;
 }
-.profile a{
+.container-1 #list p{
+    line-height: 49px;
+}
+.container-1 #list a{
     text-decoration: none;
+    color: black;
+}
+.container-1 i{
+    margin: 0px 14px 0px 30px;
+    color: rgb(7, 7, 7);
 }
