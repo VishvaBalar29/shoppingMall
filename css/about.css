@@ -1,3 +1,4 @@
+@import url(style.css);
 .sec-1{
     margin-top: 50px;
 }
@@ -25,4 +26,49 @@
     height: 436px;
     width: 546px;
     margin-top: 12px;
+}
+.sec-2{
+    background-color: #dae2e8;
+    padding: 50px;
+    margin: 40px 0px;
+}
+.d1{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bolder;
+    font-style: normal;
+    font-stretch: normal;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;   
+}
+.card {
+    width: 28%;
+    background-color:white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px  #dad5cf;
+    text-align: center;
+    
+}
+.card:hover{
+    background-color: #758d93; 
+    color: white;
+}
+
+.card-content {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    line-height: 1.5;
 }

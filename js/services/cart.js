@@ -1,15 +1,14 @@
 function getCartItems() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    console.log("hekl");
+    let container = document.getElementById("cart-left-sec");
+    container.innerHTML = ''; 
+    calculateTotal(cart);
+
     if (cart.length === 0) {
         console.log('Cart is empty!');
-        let container = document.getElementById("cart-left-sec");
-        container.innerHTML += `<p style="color:#d10a0a">Don’t miss out! Add items in your cart now. 🛒</p>`;
+        container.innerHTML = `<p style="color:#d10a0a">Don’t miss out! Add items in your cart now. 🛒</p>`;
     } else {
         console.log('Cart items:', cart);
-
-        let container = document.getElementById("cart-left-sec");
-        container.innerHTML = '';
 
         cart.forEach(product => {
             var catname = category.find(cat => product.catId == cat.id);
@@ -35,7 +34,6 @@ function getCartItems() {
         calculateTotal(cart);
     }
 }
-
 getCartItems();
 
 function add(event, productId, unitPrice) {
@@ -85,6 +83,7 @@ function removeFromCart(productId) {
 
 function calculateTotal(cart) {
     let total = 0;
+    
     cart.forEach(product => {
         total += product.price * product.quantity;  
     });
@@ -110,3 +109,4 @@ function goOnPayment(){
         window.location = "checkout.html";
     }
 }
+

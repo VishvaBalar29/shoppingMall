@@ -1,9 +1,8 @@
 function checkValidation(event) {
-    // Prevent form submission
     event.preventDefault();
     console.log("checkdlk");
     
-    // Get form values
+    
     const address1 = document.getElementById("address1").value.trim();
     const city = document.getElementById("city").value.trim();
     const state = document.getElementById("state").value.trim();
@@ -12,37 +11,53 @@ function checkValidation(event) {
     const cardNumber = document.getElementById("cardnumber").value.trim();
     const expMonthYear = document.getElementById("expmonth").value.trim();
     const cvv = document.getElementById("cvv").value.trim();
-    const error = document.getElementById("error");
+    
+    const addErr = document.getElementById('addErr');
+    const cityErr = document.getElementById('cityErr');
+    const stateErr = document.getElementById('stateErr');
+    const zipErr = document.getElementById('zipErr');
+    const nameErr = document.getElementById('nameErr');
+    const numErr = document.getElementById('numErr');
+    const expErr = document.getElementById('expErr');
+    const cvvErr = document.getElementById('cvvErr');
 
-    // Regex for validation
-    const zipRegex = /^\d{6}(-\d{4})?$/; // US Zip code
-    const cardNumberRegex = /^\d{16}$/; // 16-digit card number
-    const expMonthYearRegex = /^(0[1-9]|1[0-2])\/\d{2}$/; // MM/YY format
-    const cvvRegex = /^\d{3}$/; // 3 or 4 digit CVV
+    addErr.innerHTML = "";
+    cityErr.innerHTML = "";
+    stateErr.innerHTML = "";
+    zipErr.innerHTML = "";
+    nameErr.innerHTML = "";
+    numErr.innerHTML = "";
+    expErr.innerHTML = "";
+    cvvErr.innerHTML = "";
+
+    const zipRegex = /^\d{6}(-\d{4})?$/; 
+    const cardNumberRegex = /^\d{16}$/; 
+    const expMonthYearRegex = /^(0[1-9]|1[0-2])\/\d{2}$/; 
+    const cvvRegex = /^\d{3}$/; 
 
     if (!address1) {
-        error.innerHTML = "*Address is required";
+        addErr.innerHTML = "*Address is required";
     }
     else if (!city) {
-        error.innerHTML = "*City is required.";
+        cityErr.innerHTML = "*City is required.";
     }
     else if (!state) {
-        error.innerHTML = "*State is required.";
+        stateErr.innerHTML = "*State is required.";
     }
     else if (!zip || !zipRegex.test(zip)) {
-        error.innerHTML = "*Please enter a valid Zip Code.";
+        zipErr.innerHTML = "*Please enter a valid Zip Code.";
     }
     else if (!cardName) {
-        error.innerHTML = "*Name on card is required.";
+        nameErr.innerHTML = "*Name on card is required.";
     }
     else if (!cardNumber || !cardNumberRegex.test(cardNumber)) {
-        error.innerHTML = "*Please enter a valid 16-digit Credit Card Number.";
+        numErr.innerHTML = "*Please enter a valid 16-digit Credit Card Number.";
     }
     else if (!expMonthYear || !expMonthYearRegex.test(expMonthYear)) {
-        error.innerHTML = "*Please enter the Expiration Date in MM/YY format.";
+        expErr.innerHTML = "*Please enter the Expiration Date in MM/YY format.";
     }
     else if (!cvv || !cvvRegex.test(cvv)) {
-        error.innerHTML = "*Please enter a valid CVV (3 or 4 digits).";
+        cvvErr.innerHTML = "*Please enter a valid CVV (3 or 4 digits).";
     }
     else{
         placeOrder(event);
@@ -89,8 +104,7 @@ function placeOrder(event) {
         localStorage.setItem('order', JSON.stringify(order));
         localStorage.setItem('cart',JSON.stringify([]));
         window.location.href = "confirm.html";
-    }  
-    
+    }     
 }
 
 

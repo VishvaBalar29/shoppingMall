@@ -4,50 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <section class="navbar">
-        <nav>
-            <div style=" display: flex;align-items: center;">
-                <a href="index.html">
-                     <img id="logo" src="images/Home/logo.png" alt="">
-                </a>
-            </div>
-
-            <div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html?category=1">Fruits & Vegetables</a></li>
-                    <li><a href="products.html?category=2">Bakery</a></li>
-                    <li><a href="products.html?category=3">Fashion</a></li>
-                    <li><a href="products.html?category=4">Beauty</a></li>
-                    <li><a href="products.html?category=5">Decor</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="feedback.html">Review</a></li>
-                </ul>
-            </div>
-
-            <div class="right-sec">
-                <div>
-                    <input type="text" placeholder="Search...">
-                </div>
-                <div>
-                    <a href="cart.html" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><a>
-                </div>
-                <div id="iconDropdown">
-                    <i class="fas fa-user"> </i>
-                    <div id="iconDropdownContent">
-                        <a href="login.html">Login</a>
-                        <a href="signup.html">SignUp</a>
-                        <a href="profile.html">Profile</a>
-                        <a href="index.html" onclick="logOut(event)">Log Out</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        
     </section>
 
 
@@ -68,19 +30,51 @@
                     <p><i class="fa-solid fa-gear"></i><a href="index.html">Setting</a></p>
                     <p><i class="fa-solid fa-unlock"></i><a href="index.html">Account privacy</a></p>
                     <p><i class="fa-solid fa-circle-info"></i><a href="index.html">Help</a></p>
-                    <p><i class="fa-solid fa-right-from-bracket"></i><a href="logout.html">Log Out</a></p>
+                    <p><i class="fa-solid fa-right-from-bracket"></i><a href="logout.html" onclick="logOut(event)">Log Out</a></p>
                 </div>
                 
             </div>
         </div>
         <div class="container container-2">
             <div id="img">
-                <img src="https://cdn.teameto.com/data/B2C1/new_tzc_b2b_images/core/c-5.svg" alt="" height="100px" width="100px">
+                <img src="images/profile/cart.jpg" alt="" height="100px" width="100px" height="50px" width="50px">
+                <div id="details">
+                    <a href="cart.html"><p id="label">Your Cart</p></a>
+                    <p id="desc">"View and manage your cart items easily."aperiam 
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="container container-3">Container 3</div>
-        <div class="container container-4">Container 4</div>
-        <div class="container container-5">Container 5</div>
+        <div class="container container-3"><div id="img">
+            <img src="images/profile/bag.jpg" alt="" height="100px" width="100px" height="50px" width="50px">
+            <div id="details">
+                <a href="orderDetails.html"><p id="label">Your Order</p></a>
+                <p id="desc">"Manage your orders, payments, and delivery in one place."
+                </p>
+            </div>
+        </div></div>
+        <div class="container container-4"><div id="img">
+            <img src="images/profile/review.jpg" alt="" height="100px" width="100px" height="50px" width="50px">
+            <div id="details">
+                <a href="reviewForm.html"><p id="label">Give a Feedback</p></a>
+                <p id="desc">"Share your feedback with us."
+                </p>
+            </div>
+        </div></div>
+        <div class="container container-5"><div id="img">
+            <img src="images/profile/feedback.png" alt="" height="100px" width="100px" height="50px" width="50px">
+            <div id="details">
+                <a href="feedback.html"><p id="label">Opinions</p></a>
+                <p id="desc">"Check testimonials to see others' experiences."
+                </p>
+            </div>
+        </div></div>
     </div>
+    <section class="footer">
+
+    </section>
+
+    <script type="module" src="js/services/navbar.js"></script>
+    <script src="js/services/profile.js"></script>
 </body>
 </html>

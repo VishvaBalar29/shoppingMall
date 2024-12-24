@@ -8,19 +8,21 @@ console.log(productData);
 
 
 var container = document.getElementById('product-preview');
+var filteredCategory = category.find(cat => cat.id == productData[0].catId);
+console.log(productData[0].catId);
     container.innerHTML += `
             <div class="left-sec">
-            <img src="images/Fashion/${productData[0].image}" alt="">
+            <img src="images/${filteredCategory.name}/${productData[0].image}" alt="">
         </div>
         <div id="right-sec">
-            <p class="brand">${productData[0].name}</p>
+            <p class="brand">${filteredCategory.name}</p>
             <p class="name">${productData[0].name}</p>
-            <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi eveniet ipsa quis atque neque repellat?Cupiditate facere, voluptatum quibusdam magni eaque voluptates quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo omnis veritatis cumque velit, dolorum praesentium </p>
+            <p class="desc">${productData[0].desc}</p>
             <p class="price">₹ ${productData[0].price}    
             ${productData[0].catId == 1 ? 
                 `<span style="font-size: 17px;color: gray;font-weight: 400;">per 1Kg</span>` : ""}
             </p>
-            ${productData[0].Id==3 ? 
+            ${productData[0].catId==3 ?  
                 `<div class="size">
                 <span>size : </span>
                 <button>XS</button>

@@ -5,56 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Mall</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <section class="navbar">
-        <nav>
-            <div style=" display: flex;align-items: center;">
-                <a href="index.html">
-                    <img id="logo" src="images/Home/logo.png" alt="">
-                </a>
-            </div>
-
-            <div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html?category=1">Fruits & Vegetables</a></li>
-                    <li><a href="products.html?category=2">Bakery</a></li>
-                    <li><a href="products.html?category=3">Fashion</a></li>
-                    <li><a href="products.html?category=4">Beauty</a></li>
-                    <li><a href="products.html?category=5">Decor</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="feedback.html">Review</a></li>
-                </ul>
-            </div>
-
-
-            <div class="right-sec">
-                <div>
-                    <input type="text" placeholder="Search...">
-                </div>
-                <div>
-                    <a href="login.html" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><a>
-                </div>
-
-                <div id="iconDropdown">
-                    <i class="fas fa-user"> </i>
-
-                    <div id="iconDropdownContent">
-                        <a href="login.html">Login</a>
-                        <a href="signup.html">SignUp</a>
-                        <a href="profile.html">Profile</a>
-                        <a href="index.html" onclick="logOut(event)">Log Out</a>
-                        
-                    </div>
-                </div>
-
-            </div>
-        </nav>
+        
     </section>
     <p style="text-align: center;margin: 34px 0px;font-size: 26px;">Your Shopping Cart</p>
     <section class="cart-main">
@@ -86,9 +43,12 @@
         
 
     </section>
-    <script src="js/services/userScript.js"></script>
-    
+    <section class="footer">
+        
+    </section>
+
     <script src="js/data/category.js"></script>
+    <script type="module" src="js/services/navbar.js"></script>
     <script src="js/services/cart.js"></script>
 </body>
 </html>

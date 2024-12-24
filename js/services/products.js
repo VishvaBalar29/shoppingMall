@@ -1,3 +1,9 @@
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     navbarFun();
+// });
+
 function getQueryParam(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
@@ -40,7 +46,7 @@ function renderProducts() {
                 <a href="productPreview.html?pid=${product.id}"><div class="card">
                 <div class="img"><img src="images/${filteredCategory.name}/${product.image}" alt="" height="280" width="240"></div>
                 <div class="details">
-                    <p class="brand">Zara</p>
+                    <p class="brand">${filteredCategory.name}</p>
                     <p class="pname">${product.name}</p>
                     <p>₹ ${product.price}</p>
                 </div>
@@ -62,12 +68,12 @@ function paginationDivData() {
     let totalPages = Math.ceil(productData.length / pageSize);
 
     if (currentPage > 1) {
-        paginationContainer.innerHTML += `<button onclick="changePage(currentPage - 1)">Previous</button>`;
+        paginationContainer.innerHTML += `<button class="pagination" onclick="changePage(currentPage - 1)">Previous</button>`;
     }
 
     for (let i = 1; i <= totalPages; i++) {
         paginationContainer.innerHTML += `
-            <button 
+            <button class="pagination"
                 onclick="changePage(${i})" 
                 ${i === currentPage ? 'style="font-weight:bold"' : ''}>
                 ${i}
@@ -75,7 +81,7 @@ function paginationDivData() {
     }
 
     if (currentPage < totalPages) {
-        paginationContainer.innerHTML += `<button onclick="changePage(currentPage + 1)">Next</button>`;
+        paginationContainer.innerHTML += `<button class="pagination" onclick="changePage(currentPage + 1)">Next</button>`;
     }
 }
 

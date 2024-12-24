@@ -1,5 +1,9 @@
-function addToCart(pid) {
 
+function addToCart(pid) {
+    let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (!currentUser) {
+        alert("Please Log In...")
+      } else {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];   
     const product = products.find(product => product.id == pid);
     console.log(product);
@@ -29,6 +33,7 @@ function addToCart(pid) {
     } else {
         console.error('Product not found!');
     }
+}
 }
 
 

@@ -1,131 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Page</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <section class="navbar">
-        <nav>
-            <div style=" display: flex;align-items: center;">
-                <a href="index.html">
-                    <img id="logo" src="images/Home/logo.png" alt="">
-                </a>
-            </div>
 
-            <div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html?category=1">Fruits & Vegetables</a></li>
-                    <li><a href="products.html?category=2">Bakery</a></li>
-                    <li><a href="products.html?category=3">Fashion</a></li>
-                    <li><a href="products.html?category=4">Beauty</a></li>
-                    <li><a href="products.html?category=5">Decor</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="feedback.html">Review</a></li>
-                </ul>
-            </div>
-
-
-            <div class="right-sec">
-                <div>
-                    <input type="text" placeholder="Search...">
-                </div>
-                <div>
-                    <a href="cart.html" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><a>
-                </div>
-
-                <div id="iconDropdown">
-                    <i class="fas fa-user"> </i>
-
-                    <div id="iconDropdownContent">
-                        <a href="login.html">Login</a>
-                        <a href="signup.html">SignUp</a>
-                        <a href="profile.html">Profile</a>
-                        <a href="index.html" onclick="logOut(event)">Log Out</a>
-
-                        
-                    </div>
-                </div>
-
-            </div>
-        </nav>
     </section>
 
 
     <p class="head">Ready to Checkout?</p>
     <section class="sec-2">
         <div class="checkout-container">
-        <form action="#" method="post">
-            <div class="form-grid">
-                <!-- Address Information Section -->
-                <div class="form-section">
-                    <p class="sub-head">Address Information</p>
-                    <div class="input-group">
-                        <label for="address1" style="margin-top: 42px;">Address 1</label>
-                        <input value="" type="text" id="address1" name="address1">
-                    </div>
-                    <div class="input-group">
-                        <label for="address2">Address 2</label>
-                        <input value="" type="text" id="address2" name="address2">
-                    </div>
-                    <div class="input-group">
-                        <label for="city">City</label>
-                        <input value="" type="text" id="city" name="city">
-                    </div>
-                    <div class="input-group">
-                        <label for="state">State</label>
-                        <input value="" type="text" id="state" name="state">
-                    </div>
-                    <div class="input-group">
-                        <label for="zip">Zip Code</label>
-                        <input value="" type="text" id="zip" name="zip">
-                    </div>
-                </div>
-
-                <!-- Payment Information Section -->
-                <div class="form-section">
-                    <p class="sub-head">Payment Information</p>
-                    <div class="input-group">
-                        <label>Card Accepted</label>
-                        <div class="card-icons">
-                            <img src="images/checkout/paypal.png" alt="PayPal">
-                            <img src="images/checkout/card.png" alt="MasterCard">
-                            <img src="images/checkout/visa.png" alt="Visa">
-                            <img src="images/checkout/payment.png" alt="Rupay">
+            <form action="#" method="post">
+                <div class="form-grid">
+                    <div class="form-section">
+                        <p class="sub-head">Address Information</p>
+                        <div class="input-group">
+                            <label for="address1" style="margin-top: 42px;" class="label">Address 1</label>
+                            <input value="" type="text" id="address1" name="address1">
+                            <span id="addErr" class="error"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="address2">Address 2</label>
+                            <input value="" type="text" id="address2" name="address2">
+                        </div>
+                        <div class="input-group">
+                            <label for="city" class="label">City</label>
+                            <input value="" type="text" id="city" name="city">
+                            <span id="cityErr" class="error"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="state" class="label">State</label>
+                            <input value="" type="text" id="state" name="state">
+                            <span id="stateErr" class="error"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="zip" class="label">Zip Code</label>
+                            <input value="" type="text" id="zip" name="zip">
+                            <span id="zipErr" class="error"></span>
                         </div>
                     </div>
-                    <div class="input-group">
-                        <label for="cardname">Name on Card</label>
-                        <input value="dummy" type="text" id="cardname" name="cardname">
-                    </div>
-                    <div class="input-group">
-                        <label for="cardnumber">Credit Card Number</label>
-                        <input value="dummy" type="text" id="cardnumber" name="cardnumber" placeholder="0000 0000 0000">
-                    </div>
-                    <div class="input-group">
-                        <label for="expmonth">Exp. Month/Year</label>
-                        <input value="dummy" type="text" id="expmonth" name="expmonth" placeholder="MM/YY">
-                    </div>
-                    <div class="input-group">
-                        <label for="cvv">CVV</label>
-                        <input value="dummy" type="text" id="cvv" name="cvv">
+
+                    <div class="form-section">
+                        <p class="sub-head">Payment Information</p>
+                        <div class="input-group">
+                            <label>Card Accepted</label>
+                            <div class="card-icons">
+                                <img src="images/checkout/paypal.png" alt="PayPal">
+                                <img src="images/checkout/card.png" alt="MasterCard">
+                                <img src="images/checkout/visa.png" alt="Visa">
+                                <img src="images/checkout/payment.png" alt="Rupay">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="cardname" class="label">Name on Card</label>
+                            <input value="" type="text" id="cardname" name="cardname">
+                            <span id="nameErr" class="error"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="cardnumber" class="label">Credit Card Number</label>
+                            <input value="1243546534908767" type="text" id="cardnumber" name="cardnumber"
+                                placeholder="000000000000">
+                                <span id="numErr" class="error"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="expmonth" class="label">Exp. Month/Year</label>
+                            <input value="00/00" type="text" id="expmonth" name="expmonth" placeholder="MM/YY">
+                            <span id="expErr" class="error"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="cvv" class="label">CVV</label>
+                            <input value="000" type="text" id="cvv" name="cvv">
+                            <span id="cvvErr" class="error"></span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <p id="error" style="color: rgb(205, 28, 28);margin-left: 15px;"></p>
-            <!-- Submit Button -->
-            <button type="submit" class="checkout-btn" onclick="checkValidation(event)" >Proceed to Checkout</button>
-        </form>
-    </div>
-</section>
-<script src="js/services/placeOrder.js"></script>
-<script src="js/services/userScript.js"></script>
+                <p id="error" style="color: rgb(205, 28, 28);margin-left: 15px;"></p>
+                <button type="submit" class="checkout-btn" onclick="checkValidation(event)">Proceed to Checkout</button>
+            </form>
+        </div>
+    </section>
+    <section class="footer">
 
+    </section>
+
+    <script type="module" src="js/services/navbar.js"></script>
+    <script src="js/services/placeOrder.js"></script>
+    <script>
+        let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        if (currentUser) {
+            let cardname = document.getElementById('cardname');
+            cardname.value = currentUser.userName;
+        }
+    </script>
 
 </body>
+
 </html>

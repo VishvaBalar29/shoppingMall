@@ -1,3 +1,4 @@
+@import url(style.css);
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,7 +17,6 @@ body {
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
-    /* background-color: #f4f4f4; */
 }
 .container-1 {
     grid-row: span 2; 
@@ -52,7 +52,7 @@ body {
 }
 .container-1 #list{
     text-align: left;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .container-1 #list p{
     line-height: 49px;
@@ -64,4 +64,31 @@ body {
 .container-1 i{
     margin: 0px 14px 0px 30px;
     color: rgb(7, 7, 7);
+}
+.container img{
+    height: 70px;
+    width: 70px;
+}
+.container #details #label{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 12px;
+    cursor: pointer;
+    color: #2d4964;
+}
+.container #details #desc{
+    font-size: 14px;
+    color: rgb(112, 110, 110);
+    letter-spacing: 0.5px;
+    margin-top: 25px;
+    line-height: 20px;
+}
+.container .count{
+    font-size: 40px;
+}
+.container:hover{
+    background-color: #e7e6e6;
+}
+a{
+    text-decoration: none;
 }

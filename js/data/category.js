@@ -95,17 +95,17 @@ const subCategory = [
     catId : 5
   },
   {
-    id : 14,
+    id : 15,
     name : "Mirors",
     catId : 5
   },
   {
-    id : 15,
+    id : 16,
     name : "Lamps & Lighting",
     catId : 5
   },
   {
-    id : 13,
+    id : 17,
     name : "Sofas & Seating",
     catId : 5
   } 

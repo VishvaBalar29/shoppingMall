@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600&display=swap');
-
+@import url(style.css);
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f3f2ee;
@@ -187,8 +187,10 @@ body {
     color: white;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 17px;
-    
+    font-size: 17px;   
+}
+.pagination{
+    cursor: pointer;
 }
 
 
