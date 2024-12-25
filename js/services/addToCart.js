@@ -2,7 +2,8 @@
 function addToCart(pid) {
     let currentUser = JSON.parse(localStorage.getItem("currentUser"));
     if (!currentUser) {
-        alert("Please Log In...")
+        alert("Please Log In...");
+        window.location.href="login.html";
       } else {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];   
     const product = products.find(product => product.id == pid);

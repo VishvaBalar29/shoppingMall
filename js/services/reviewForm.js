@@ -17,7 +17,7 @@ document.getElementById('reviewForm').addEventListener('submit', function (event
     } else {
         nameError.textContent = "";
     }
-    
+
     const email = document.getElementById('email').value.trim();
     const emailError = document.getElementById('emailError');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -30,5 +30,16 @@ document.getElementById('reviewForm').addEventListener('submit', function (event
 
     if (!isValid) {
         event.preventDefault();
+    }
+    if (isValid) {
+        let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        if (!currentUser) {
+            alert("Please Login first");
+            window.location.href = "login.html";
+            event.preventDefault();
+        }
+        else{
+            alert("Your Feedback submitted successfully..")
+        }
     }
 });

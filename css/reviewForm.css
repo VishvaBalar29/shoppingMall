@@ -60,3 +60,9 @@ button:hover {
     color: red;
     font-size: 0.9em;
 }
+.req::after{
+    content: "*";
+    color: red;
+    font-size: 14px;
+    margin-left: 1px;
+}

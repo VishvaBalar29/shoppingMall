@@ -14,7 +14,7 @@ function checLoginkValidation(
   let success = false;
   if (!email) {
     emailErr.innerHTML = "*Email is required.";
-  } else if(!regex.test(email)){
+  } else if (!regex.test(email)) {
     emailErr.innerHTML = "*Invalid email address. Please enter a valid email.";
   } else if (!password) {
     pswdErr.innerHTML = "*Password is required.";
@@ -45,6 +45,15 @@ function loginUser(event) {
     error.innerHTML = "*Invalid credential.";
     return false;
   }
-  localStorage.setItem("currentUser", JSON.stringify(currentUser));
-  window.location.href = "index.html";
+
+  let loggedIn = JSON.parse(localStorage.getItem("currentUser"));
+  if (loggedIn) {
+    error.innerHTML = "Another User is already logged in. Please log out first.";
+  }
+  else {
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    window.location.href = "index.html";
+  }
+
+
 }

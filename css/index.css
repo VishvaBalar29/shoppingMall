@@ -154,13 +154,14 @@
 
 .home-cat-sec .cats{   
     display: grid;
-    margin: 40px 12rem;
-    grid-template-columns: auto auto auto auto;
+    margin: 40px 0px;
+     justify-content: center;
+    grid-template-columns: 250px 250px 250px 250px;
 
 }
 .cats div{
-    height: 310px;
-    width: 283px;
+    height: 250px;
+    width: 250px;
     border: 1px solid gray;
     border-right: none;  
     border-bottom: none; 
@@ -176,10 +177,19 @@
 .cats div p{
     font-weight: 500;
     font-size: 20px;
+    
 }
 .cats div a{
     text-decoration: none;
     color: black;
+    transition: text-shadow 0.3s ease,
+                font-size 0.3s ease,
+                color 0.3s ease;
+}
+.cats div a:hover{
+    color: rgb(4, 66, 84);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 21px;
 }
 .home-cat-sec .head{
     text-align: center;
