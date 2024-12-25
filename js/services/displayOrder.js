@@ -14,7 +14,7 @@ orders.forEach(order => {
         total += item.price * item.quantity;
         orderItemsRows += `
             <tr>
-                <td><img src="images/${catname.name}/${item.image}" alt=""></td>
+                <td><a href="productPreview.html?pid=${item.id}"><img src="images/${catname.name}/${item.image}" alt=""></a></td>
                 <td>${item.name}</td>
                 <td>₹ ${item.price}</td>
                 <td>${item.quantity}</td>

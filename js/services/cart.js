@@ -13,9 +13,11 @@ function getCartItems() {
         cart.forEach(product => {
             var catname = category.find(cat => product.catId == cat.id);
             let price = product.price * product.quantity;
+            
+            
             container.innerHTML += `<div class="block">
-                <div class="img">
-                    <img src="images/${catname.name}/${product.image}" alt="">
+                <div class="img"><a href="productPreview.html?pid=${product.id}">
+                    <img src="images/${catname.name}/${product.image}" alt=""></a>
                 </div>
                 <div class="details">
                     <p class="name">${product.name}</p>

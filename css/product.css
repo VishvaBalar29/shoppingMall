@@ -105,13 +105,14 @@ body {
     margin-top: 60px;
     margin-bottom: 60px;
     background-color: white;
-    padding: 40px;
+    /* padding: 40px; */
+    padding : 30px 40px 40px 40px;
 }
 #product-preview .left-sec {
     margin: auto;
 }
 #product-preview .left-sec img{
-    height: 420px;
+    height: 380px;
     width: 315px;
 }
 #product-preview #right-sec{
