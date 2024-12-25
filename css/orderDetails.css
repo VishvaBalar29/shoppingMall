@@ -5,6 +5,8 @@ body{
 .main{
     width: 85%;
     margin: auto;
+    min-height: 250px;
+    margin-bottom: 50px;
 }
 .main-table{
     margin: auto;
@@ -62,3 +64,14 @@ td{
 .sub-table2 td{
     border: none;
 }
+
+
+userLoggedIn
+
+reviewForm
+
+productpreview
+products
+profile
+login
+signup

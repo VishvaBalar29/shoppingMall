@@ -20,7 +20,7 @@ function logOut(event) {
     } else {
       localStorage.removeItem("currentUser");
       localStorage.removeItem("cart");
-      // localStorage.removeItem("order");
+      localStorage.removeItem("order");
       window.location.href = "index.html";
       alert("User logged out!!");
     }
