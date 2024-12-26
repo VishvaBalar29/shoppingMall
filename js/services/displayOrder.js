@@ -54,10 +54,9 @@ orders.forEach(order => {
                 </table>
             </td>
             <td style="text-align: left;padding: 12;">
-                <p>${orderAddress.address1}</p>
-                <p>${orderAddress.address2}</p>
-                <p>City : ${orderAddress.city}</p>
-                <p>State : ${orderAddress.state}</p>
+                <p style="margin: 20px 12px;"><strong> Address : </strong> ${orderAddress.address1}, ${orderAddress.address2}</p>
+                <p style="margin: 20px 12px;"><strong>City : </strong>${orderAddress.city}</p>
+                <p style="margin: 20px 12px;"><strong>State : </strong>${orderAddress.state}</p>
             </td>
             <td>${cardDetails.cardnumber}</td>
             <td>${order.orderDate}</td>
