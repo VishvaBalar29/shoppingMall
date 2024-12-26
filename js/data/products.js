@@ -406,9 +406,4 @@ const products = [
     "desc":"choco-ball with goodness of white chocolate, for kids. "
   },
 
-
-
-
-
-
 ]
