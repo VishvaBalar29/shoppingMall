@@ -360,6 +360,52 @@ const products = [
     "image": "sofa1.jpg",
     "desc":"EDIER Dimmable Touch Control Table Lamp is a stylish and functional spiral modern bedside lamp, featuring 3 colors of LED lights. With non-polar touch adjustment, you can easily control the brightness to suit any occasion. This small black decorative lamp is perfect for adding a contemporary touch to your home or living room."
   },
+  {
+    "id": 41,
+    "catId": 3,
+    "subCatId": 18,
+    "name": "Co-ord set",
+    "price": 1500,
+    "image": "co ord set.jpg",
+    "desc":"Off-white pant with Brown Shirt. Comfortable,easy to wash,cotton material, rash-free."
+  },
+  {
+  "id": 42,
+    "catId": 3,
+    "subCatId": 19,
+    "name": "Infant",
+    "price": 1000,
+    "image": "infant.jpg",
+    "desc":"Soft material for 1-3 months baby , rash-free, easy to wash."
+  },
+  {
+    "id": 43,
+      "catId": 3,
+      "subCatId": 20,
+      "name": "Pink dot gown",
+      "price": 1199,
+      "image": "pink gown.pnj",
+      "desc":"Soft material for 11-18 months baby , rash-free, easy to wash."
+    },
+    {
+  "id": 44,
+    "catId": 2,
+    "subCatId": 21,
+    "name": "Nutella.jpg",
+    "price": 836,
+    "image": "nutella.jpg",
+    "desc":"Goodness of chocolate, high in fiber."
+  },
+  {
+  "id": 45,
+    "catId": 2,
+    "subCatId": 22,
+    "name": "Kinder joy",
+    "price": 50,
+    "image": "kinderjoy.jpg",
+    "desc":"choco-ball with goodness of white chocolate, for kids. "
+  },
+
 
 
 
