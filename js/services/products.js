@@ -63,7 +63,7 @@ function renderProducts() {
 
 function paginationDivData() {
     let paginationContainer = document.getElementById('pagination-controls');
-    paginationContainer.innerHTML = ''; // Clear previous controls
+    paginationContainer.innerHTML = ''; 
 
     let totalPages = Math.ceil(productData.length / pageSize);
 
