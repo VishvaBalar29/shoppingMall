@@ -363,7 +363,7 @@ const products = [
   {
     "id": 41,
     "catId": 3,
-    "subCatId": 18,
+    "subCatId": 10,
     "name": "Co-ord set",
     "price": 1500,
     "image": "co ord set.jpg",
@@ -372,7 +372,7 @@ const products = [
   {
   "id": 42,
     "catId": 3,
-    "subCatId": 19,
+    "subCatId": 10,
     "name": "Infant",
     "price": 1000,
     "image": "infant.jpg",
@@ -381,16 +381,16 @@ const products = [
   {
     "id": 43,
       "catId": 3,
-      "subCatId": 20,
-      "name": "Pink dot gown",
+      "subCatId": 10,
+      "name": "Pink Partywear Gown",
       "price": 1199,
-      "image": "pink gown.pnj",
+      "image": "pinkgown.jpeg",
       "desc":"Soft material for 11-18 months baby , rash-free, easy to wash."
     },
     {
   "id": 44,
     "catId": 2,
-    "subCatId": 21,
+    "subCatId": 7,
     "name": "Nutella.jpg",
     "price": 836,
     "image": "nutella.jpg",
@@ -399,7 +399,7 @@ const products = [
   {
   "id": 45,
     "catId": 2,
-    "subCatId": 22,
+    "subCatId": 7,
     "name": "Kinder joy",
     "price": 50,
     "image": "kinderjoy.jpg",
